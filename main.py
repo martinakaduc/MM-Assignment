@@ -6,7 +6,7 @@ from student_submissions.s2313640.policy2313640 import Policy2313640
 # Create the environment
 env = gym.make(
     "gym_cutting_stock/CuttingStock-v0",
-    render_mode="human",  # Comment this line to disable rendering
+    # render_mode="human",  # Comment this line to disable rendering
 )
 NUM_EPISODES = 100
 
@@ -43,16 +43,16 @@ if __name__ == "__main__":
 
     # Uncomment the following code to test your policy
     # # Reset the environment
-    # observation, info = env.reset(seed=42)
-    # print(info)
+    observation, info = env.reset(seed=42)
+    print(info)
 
-    # policy2210xxx = Policy2210xxx()
-    # for _ in range(200):
-    #     action = policy2210xxx.get_action(observation, info)
-    #     observation, reward, terminated, truncated, info = env.step(action)
-    #     print(info)
+    policy2210xxx = Policy2313640()
+    for _ in range(200):
+        action = policy2210xxx.get_action(observation, info)
+        observation, reward, terminated, truncated, info = env.step(action)
+        print(info)
 
-    #     if terminated or truncated:
-    #         observation, info = env.reset()
+        if terminated or truncated:
+            observation, info = env.reset()
 
 env.close()
