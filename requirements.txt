@@ -5,3 +5,5 @@ time
 math
 copy
 random
+matplotlib
+pygame
