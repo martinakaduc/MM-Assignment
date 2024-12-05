@@ -3,7 +3,7 @@ from math import floor, ceil
 from copy import deepcopy
 from random import randint, shuffle, random, choice, choices
 import time  # Ensure 'time' is imported
-class GeneticPolicy(Policy):
+class Policy2310139_2310090_2310191_2310242_2310423(Policy):
     def __init__(self, populationSize = 300, penalty = 2, mutationRate = 0.1):
         # Student code here
         """

@@ -1,7 +1,7 @@
 import gym_cutting_stock
 import gymnasium as gym
 from policy import GreedyPolicy, RandomPolicy
-from student_submissions.s2210xxx.policy2210xxx import GeneticPolicy
+from student_submissions.s2310139_2310090_2310191_2310242_2310423.policy2310139_2310090_2310191_2310242_2310423 import Policy2310139_2310090_2310191_2310242_2310423
 
 # # Create the environment
 # env = gym.make(
@@ -100,7 +100,7 @@ if __name__ == "__main__":
     test_policy(rd_policy, "RandomPolicy", env)
 
     # Test GeneticPolicy
-    policy2210xxx = GeneticPolicy()
-    test_policy(policy2210xxx, "GeneticPolicy", env)
+    ga_policy = Policy2310139_2310090_2310191_2310242_2310423()
+    test_policy(ga_policy, "GeneticPolicy", env)
 
 env.close()
