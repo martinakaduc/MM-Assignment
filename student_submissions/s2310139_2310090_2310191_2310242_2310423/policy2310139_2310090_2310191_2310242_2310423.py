@@ -2,8 +2,13 @@ from policy import Policy
 from math import floor, ceil
 from copy import deepcopy
 from random import randint, shuffle, random, choice, choices
-import time  # Ensure 'time' is imported
+import time  
+import numpy as np
+
 class Policy2310139_2310090_2310191_2310242_2310423(Policy):
+    #------------------------------------------------------------------------------------------------------------------------
+    #Part 1(Nguyễn Hoàng Gia Bảo)
+    #------------------------------------------------------------------------------------------------------------------------
     def __init__(self, populationSize = 300, penalty = 2, mutationRate = 0.1):
         # Student code here
         """
@@ -16,8 +21,8 @@ class Policy2310139_2310090_2310191_2310242_2310423(Policy):
         """
         self.MAX_ITERATIONS = 2000 # Số vòng lặp tối đa cho thuật toán
         self.POPULATION_SIZE = populationSize
-        self.stockLength = None  # Chiều dài của kho nguyên liệu
-        self.stockWidth = None # Chiều rộng của kho nguyên liệu
+        self.stockLength = 0  # Chiều dài của kho nguyên liệu
+        self.stockWidth = 0 # Chiều rộng của kho nguyên liệu
         self.lengthArr = [] # Mảng chứa chiều dài của các mẫu
         self.widthArr = [] # Mảng chứa chiều rộng của các mẫu
         self.demandArr = [] # Mảng chứa số lượng yêu cầu các mẫu
@@ -26,44 +31,64 @@ class Policy2310139_2310090_2310191_2310242_2310423(Policy):
         self.mutationRate = mutationRate
 
    
+    # def generate_efficient_patterns(self):
+    #     result = []
+    #     availableArr = [
+    #         min(
+    #             floor(self.stockLength / self.lengthArr[0]),
+    #             floor(self.stockWidth / self.widthArr[0]),
+    #             self.demandArr[0]
+    #         )
+    #     ]
+    #     for n in range(1, self.N):
+    #         s = sum(availableArr[j] * self.lengthArr[j] for j in range(n))
+    #         availableArr.append(
+    #             min(
+    #                 floor((self.stockLength - s) / self.lengthArr[n]),
+    #                 floor((self.stockWidth - s) / self.widthArr[n]),
+    #                 self.demandArr[n]
+    #             )
+    #         )
+    #     while True:
+    #         if sum(availableArr) == 0:  # Stop if no patterns are feasible
+    #             break
+    #         result.append(availableArr.copy())
+    #         for j in range(len(availableArr) - 1, -1, -1):
+    #             if availableArr[j] > 0:
+    #                 availableArr[j] -= 1
+    #                 for k in range(j + 1, self.N):
+    #                     s = sum(availableArr[m] * self.lengthArr[m] for m in range(k))
+    #                     availableArr[k] = min(
+    #                         floor((self.stockLength - s) / self.lengthArr[k]),
+    #                         floor((self.stockWidth - s) / self.widthArr[k]),
+    #                         self.demandArr[k]
+    #                     )
+    #                 break
+    #         else:
+    #             break
+    #     return result
+    
     def generate_efficient_patterns(self):
-        result = []
-        availableArr = [
-                min(
-                        floor(self.stockLength / self.lengthArr[0]),
-                        floor(self.stockWidth / self.widthArr[0]),
-                        self.demandArr[0]
+        patterns = []
+        stack = [([0] * self.N, 0, 0)]
+
+        while stack:
+            current_pattern, length_used, width_used = stack.pop()
+
+            for i in range(self.N):
+                max_repeat = min(
+                    (self.stockLength - length_used) // self.lengthArr[i],
+                    (self.stockWidth - width_used) // self.widthArr[i],
+                    self.demandArr[i]
                 )
-        ]
+                if max_repeat > 0:
+                    new_pattern = current_pattern.copy()
+                    new_pattern[i] += max_repeat
+                    patterns.append(new_pattern)
+                    stack.append((new_pattern, length_used + max_repeat * self.lengthArr[i],
+                                  width_used + max_repeat * self.widthArr[i]))
 
-        for n in range(1, self.N):
-                s = sum(availableArr[j] * self.lengthArr[j] for j in range(n))
-                availableArr.append(
-                        min(
-                                floor((self.stockLength - s) / self.lengthArr[n]),
-                                floor((self.stockWidth - s) / self.widthArr[n]),
-                                self.demandArr[n]
-                        )
-                )
-
-        while True:
-                result.append(availableArr.copy())
-                for j in range(len(availableArr) - 1, -1, -1):
-                        if availableArr[j] > 0:
-                                availableArr[j] -= 1
-                                for k in range(j + 1, self.N):
-                                        s = sum(availableArr[m] * self.lengthArr[m] for m in range(k))
-                                        availableArr[k] = min(
-                                                floor((self.stockLength - s) / self.lengthArr[k]),
-                                                floor((self.stockWidth - s) / self.widthArr[k]),
-                                                self.demandArr[k]
-                                        )
-                                break
-                else:
-                        break
-        return result
-
-
+        return patterns
 
     def calculate_max_pattern_repetition(self, patternsArr):
         """
@@ -89,23 +114,40 @@ class Policy2310139_2310090_2310191_2310242_2310423(Policy):
 
 
     def initialize_population(self, maxRepeatArr):
+        # initPopulation = []
+        # for _ in range(self.POPULATION_SIZE):
+        #     chromosome = []
+        #     indices = list(range(len(maxRepeatArr)))
+        #     shuffle(indices)
+        #     for idx in indices:
+        #         chromosome.append(idx)
+        #         chromosome.append(max(1, maxRepeatArr[idx]))
+        #     initPopulation.append(chromosome)
+        # return initPopulation
         initPopulation = []
         for _ in range(self.POPULATION_SIZE):
             chromosome = []
-            indices = list(range(len(maxRepeatArr)))
-            shuffle(indices)
-            for idx in indices:
-                chromosome.append(idx)
-                chromosome.append(randint(1, maxRepeatArr[idx]))
+            for i in np.argsort(-np.array(self.lengthArr) * np.array(self.widthArr)):  # Sắp xếp mẫu lớn trước
+                chromosome.append(i)
+                chromosome.append(randint(1, maxRepeatArr[i]))
             initPopulation.append(chromosome)
         return initPopulation
 
-
+    #------------------------------------------------------------------------------------------------------------------------
+    #Part 2 (Võ Duy Ân)
+    #------------------------------------------------------------------------------------------------------------------------
     def evaluate_fitness(self, chromosome, patterns_arr):
         P = self.penalty
         unsupplied_sum = 0
         provided = [0] * self.N
         total_unused_area = 0  # Track unused area
+
+        if self.stockLength == 0 or self.stockWidth == 0:
+            raise ValueError("Stock dimensions (length or width) are not properly initialized.")
+
+        stock_area = self.stockLength * self.stockWidth
+        if stock_area == 0:
+            stock_area = 1  # Fallback to prevent division by zero
 
         for i in range(0, len(chromosome), 2):
             pattern_index = chromosome[i]
@@ -119,20 +161,18 @@ class Policy2310139_2310090_2310191_2310242_2310423(Policy):
             pattern_area = sum(
                 pattern[j] * self.lengthArr[j] * self.widthArr[j] for j in range(len(pattern))
             )
-            total_unused_area += self.stockLength * self.stockWidth - pattern_area * repetition
+            total_unused_area += stock_area - pattern_area * repetition
 
         for i in range(self.N):
             unsupplied = max(0, self.demandArr[i] - provided[i])
             unsupplied_sum += unsupplied * self.lengthArr[i] * self.widthArr[i]
 
         fitness = (
-            0.7 * (1 - total_unused_area / (self.stockLength * self.stockWidth))  # Prioritize material usage
+            0.7 * (1 - total_unused_area / stock_area)  # Prioritize material usage
             - 0.3 * (P * unsupplied_sum / sum(self.demandArr))  # Penalize unsupplied products proportionally
         )
 
         return fitness
-
-
 
     def run(self, population, patterns_arr, max_repeat_arr, problem_path, queue=None):
         """
@@ -178,22 +218,27 @@ class Policy2310139_2310090_2310191_2310242_2310423(Policy):
 
             # Create new population
             while len(next_generation) < self.POPULATION_SIZE:
-                if random() < 0.5:
-                    parent1 = self.select_parents1([fp[0] for fp in fitness_pairs], [fp[1] for fp in fitness_pairs])
-                    parent2 = self.select_parents1([fp[0] for fp in fitness_pairs], [fp[1] for fp in fitness_pairs])
-                else:
-                    parent1 = self.select_parents2([fp[0] for fp in fitness_pairs], [fp[1] for fp in fitness_pairs])
-                    parent2 = self.select_parents2([fp[0] for fp in fitness_pairs], [fp[1] for fp in fitness_pairs])
+                parent1 = None
+                parent2 = None
 
-                # Generate offspring with crossover and appropriate mutation
-                if count < self.MAX_ITERATIONS * 0.5:
-                    child1 = self.mutate2(self.crossover(parent1, parent2), max_repeat_arr, patterns_arr)
-                    child2 = self.mutate2(self.crossover(parent2, parent1), max_repeat_arr, patterns_arr)
-                else:
-                    child1 = self.mutate(self.crossover(parent1, parent2), max_repeat_arr)
-                    child2 = self.mutate(self.crossover(parent2, parent1), max_repeat_arr)
+                try:
+                    if random() < 0.5:
+                        parent1 = self.select_parents1([fp[0] for fp in fitness_pairs], [fp[1] for fp in fitness_pairs])
+                        parent2 = self.select_parents1([fp[0] for fp in fitness_pairs], [fp[1] for fp in fitness_pairs])
+                    else:
+                        parent1 = self.select_parents2([fp[0] for fp in fitness_pairs], [fp[1] for fp in fitness_pairs])
+                        parent2 = self.select_parents2([fp[0] for fp in fitness_pairs], [fp[1] for fp in fitness_pairs])
+                except ValueError as e:
+                    # Fallback to random selection if selection fails
+                    parent1 = choice([fp[0] for fp in fitness_pairs])
+                    parent2 = choice([fp[0] for fp in fitness_pairs])
 
-                next_generation.extend([child1, child2])
+                # Perform crossover and mutation
+                if parent1 and parent2:
+                    child1 = self.mutate(self.crossover(parent1, parent2), self.mutationRate, max_repeat_arr)
+                    child2 = self.mutate(self.crossover(parent2, parent1), self.mutationRate, max_repeat_arr)
+                    next_generation.extend([child1, child2])
+
 
             # Update population for the next iteration
             population = deepcopy(next_generation[:self.POPULATION_SIZE])
@@ -207,26 +252,83 @@ class Policy2310139_2310090_2310191_2310242_2310423(Policy):
         return best_solution, best_fitness, best_results, end_time - start_time
 
 
+    #------------------------------------------------------------------------------------------------------------------------
+    #Part 3 (Phạm Duy Anh)
+    #------------------------------------------------------------------------------------------------------------------------
     @staticmethod
-    # def mutate(chromosome, mutation_rate, max_repeat_arr):
-    #     """
-    #     Thực hiện đột biến ngẫu nhiên trên một cá thể.
+    def select_parents1(population, fitness_scores):
+        total_fitness = sum(fitness_scores)
+        if total_fitness == 0:  # Handle zero fitness case
+            return choice(population)
 
-    #     Tham số:
-    #     - chromosome: Cá thể cần đột biến.
-    #     - mutation_rate: Xác suất đột biến.
-    #     - max_repeat_arr: Giới hạn số lần lặp tối đa của từng mẫu.
+        probabilities = [fitness / total_fitness for fitness in fitness_scores]
+        return choices(population, probabilities)[0]
 
-    #     Kết quả:
-    #     - Trả về cá thể sau khi đột biến.
-    #     """
-    #     mutated_chromosome = chromosome[:]
-    #     for i in range(0, len(chromosome), 2):  # Xét từng cặp (pattern_index, repetition)
-    #         if random() < mutation_rate and i + 1 < len(chromosome) :
-    #             # Thay đổi số lần lặp trong giới hạn
-    #             pattern_index = mutated_chromosome[i]
-    #             mutated_chromosome[i+1] = randint(1, max_repeat_arr[pattern_index])
-    #     return mutated_chromosome
+    @staticmethod
+    def select_parents2(population, fitness_scores, tournament_size = 5):
+        """
+        Lựa chọn cha mẹ bằng phương pháp Tournament.
+
+        Tham số:
+        - population: Quần thể hiện tại.
+        - fitness_scores: Điểm fitness của các cá thể trong quần thể.
+        - tournament_size: Kích thước nhóm trong tournament.
+
+        Kết quả:
+        - Trả về một cá thể được chọn làm cha/mẹ.
+        """
+        indices = choices(range(len(population)), k=tournament_size)
+        tournament = [population[i] for i in indices]
+        tournament_scores = [fitness_scores[i] for i in indices]
+
+        # Tìm cá thể tốt nhất trong nhóm tournament
+        best_index = tournament_scores.index(max(tournament_scores))
+        return tournament[best_index]
+    
+    @staticmethod
+    def crossover(parent1, parent2):
+        """
+        Lai ghép hai cá thể để tạo ra một cá thể con mới.
+
+        Tham số:
+        - parent1: Cá thể cha.
+        - parent2: Cá thể mẹ.
+
+        Kết quả:
+        - Trả về một cá thể con.
+        """
+        if parent1 is None or parent2 is None:
+            raise ValueError("Parents must not be None")
+
+        child = []
+        for i in range(len(parent1)):
+            # Chọn gen từ cha hoặc mẹ
+            if random() < 0.5:
+                child.append(parent1[i])
+            else:
+                child.append(parent2[i])
+        return child
+    
+    @staticmethod
+    def mutate(chromosome, mutation_rate, max_repeat_arr):
+        """
+        Thực hiện đột biến ngẫu nhiên trên một cá thể.
+
+        Tham số:
+        - chromosome: Cá thể cần đột biến.
+        - mutation_rate: Xác suất đột biến.
+        - max_repeat_arr: Giới hạn số lần lặp tối đa của từng mẫu.
+
+        Kết quả:
+        - Trả về cá thể sau khi đột biến.
+        """
+        mutated_chromosome = chromosome[:]
+        for i in range(0, len(chromosome), 2):  # Xét từng cặp (pattern_index, repetition)
+            if random() < mutation_rate and i + 1 < len(chromosome) :
+                # Thay đổi số lần lặp trong giới hạn
+                pattern_index = mutated_chromosome[i]
+                mutated_chromosome[i+1] = randint(1, max_repeat_arr[pattern_index])
+        return mutated_chromosome
     
     def select_new_population(self,population, fitness_scores, patterns_arr, mutation_rate, max_repeat_arr, selection_type="tournament"):
         """
@@ -266,242 +368,56 @@ class Policy2310139_2310090_2310191_2310242_2310423(Policy):
 
         return new_population
 
-
-    # def get_action(self, observation, info):
-    #     """
-    #     Genetic algorithm to decide the best action.
-    #     """
-    #     list_prods = observation["products"]
-    #     stocks = observation["stocks"]
-
-    #     # Default action
-    #     prod_size = [0, 0]
-    #     stock_idx = -1
-    #     pos_x, pos_y = 0, 0
-
-    #     # Iterate over products
-    #     for prod in list_prods:
-    #         if prod["quantity"] > 0:
-    #             prod_size = prod["size"]
-
-    #             # Apply a genetic-like heuristic to find placement
-    #             best_fitness = float("inf")
-    #             best_action = None
-
-    #             for i, stock in enumerate(stocks):
-    #                 stock_w, stock_h = self._get_stock_size_(stock)
-    #                 prod_w, prod_h = prod_size
-
-    #                 if stock_w < prod_w or stock_h < prod_h:
-    #                     continue
-
-    #                 # Check all possible positions
-    #                 for x in range(stock_w - prod_w + 1):
-    #                     for y in range(stock_h - prod_h + 1):
-    #                         if self._can_place_(stock, (x, y), prod_size):
-    #                             # Fitness function: Minimize unused area
-    #                             unused_area = stock_w * stock_h - prod_w * prod_h
-    #                             # fitness = unused_area + abs(stock_w - prod_w) + abs(stock_h - prod_h)
-    #                             if unused_area < best_fitness:
-    #                                 best_fitness = unused_area
-    #                                 best_action = {"stock_idx": i, "size": prod_size, "position": (x, y)}
-
-    #             if best_action:
-    #                 stock_idx = best_action["stock_idx"]
-    #                 pos_x, pos_y = best_action["position"]
-    #                 break
-
-    #     return {"stock_idx": stock_idx, "size": prod_size, "position": (pos_x, pos_y)}
-    
-    
     def get_action(self, observation, info):
         list_prods = observation["products"]
+        stocks = observation["stocks"]
 
-        prod_size = [0, 0]
-        stock_idx = -1
-        pos_x, pos_y = 0, 0
+        # Ensure there are stocks available
+        if not stocks or not list_prods:
+            return {"stock_idx": -1, "size": [0, 0], "position": (0, 0)}
 
-        # Sort products by size (largest first)
-        list_prods = sorted(list_prods, key=lambda prod: prod["size"][0] * prod["size"][1], reverse=True)
+        # Extract product dimensions and demands
+        self.lengthArr = [prod["size"][0] for prod in list_prods if prod["quantity"] > 0]
+        self.widthArr = [prod["size"][1] for prod in list_prods if prod["quantity"] > 0]
+        self.demandArr = [prod["quantity"] for prod in list_prods if prod["quantity"] > 0]
+        self.N = len(self.lengthArr)
 
-        # Pick a product that has quantity > 0
-        for prod in list_prods:
-            if prod["quantity"] > 0:
-                prod_size = prod["size"]
+        if self.N == 0:
+            return {"stock_idx": -1, "size": [0, 0], "position": (0, 0)}
 
-                # Loop through all stocks
-                for i, stock in enumerate(observation["stocks"]):
-                    stock_w, stock_h = self._get_stock_size_(stock)
-                    prod_w, prod_h = prod_size
+        # Initialize stock dimensions using the first stock in the list
+        first_stock = stocks[0]
+        self.stockLength, self.stockWidth = self._get_stock_size_(first_stock)
 
-                    if stock_w < prod_w or stock_h < prod_h:
-                        continue
+        # Generate patterns and initialize population
+        patterns_arr = self.generate_efficient_patterns()
+        max_repeat_arr = self.calculate_max_pattern_repetition(patterns_arr)
+        population = self.initialize_population(max_repeat_arr)
 
-                    pos_x, pos_y = None, None
-                    for x in range(stock_w - prod_w + 1):
-                        for y in range(stock_h - prod_h + 1):
-                            if self._can_place_(stock, (x, y), prod_size):
-                                pos_x, pos_y = x, y
-                                break
-                        if pos_x is not None and pos_y is not None:
-                            break
+        # Run the genetic algorithm
+        best_solution, _, _, _ = self.run(population, patterns_arr, max_repeat_arr, None)
 
-                    if pos_x is not None and pos_y is not None:
-                        stock_idx = i
-                        break
+        # Translate best solution to a placement action
+        for i in range(0, len(best_solution), 2):
+            pattern_index = best_solution[i]
+            repetition = best_solution[i + 1]
+            pattern = patterns_arr[pattern_index]
 
-                if pos_x is not None and pos_y is not None:
-                    break
+            for stock_idx, stock in enumerate(stocks):
+                stock_w, stock_h = self._get_stock_size_(stock)
+                for x in range(stock_w):
+                    for y in range(stock_h):
+                        if pattern_index >= len(self.lengthArr):
+                            continue  # Skip invalid pattern indices
+                        prod_size = (self.lengthArr[pattern_index], self.widthArr[pattern_index])   
 
-        return {"stock_idx": stock_idx, "size": prod_size, "position": (pos_x, pos_y)}
-    
-    # def get_action(self, observation, info):
-    #     list_prods = observation["products"]
-    #     stocks = observation["stocks"]
+                        if self._can_place_(stock, (x, y), prod_size):
+                            return {
+                                "stock_idx": stock_idx,
+                                "size": prod_size,
+                                "position": (x, y)
+                            }
 
-    #     prod_to_cut = None
-    #     best_stock_idx = -1
-    #     best_position = None
-    #     best_unused_area = float("inf")
-
-    #     # Prioritize products by demand (highest first) and size (largest first)
-    #     list_prods = sorted(
-    #         list_prods,
-    #         key=lambda prod: (-prod["quantity"], -prod["size"][0] * prod["size"][1])
-    #     )
-
-    #     for prod in list_prods:
-    #         if prod["quantity"] <= 0:
-    #             continue
-
-    #         prod_size = prod["size"]
-    #         prod_w, prod_h = prod_size
-
-    #         for stock_idx, stock in enumerate(stocks):
-    #             stock_w, stock_h = self._get_stock_size_(stock)
-
-    #             # Skip stock if product doesn't fit
-    #             if stock_w < prod_w or stock_h < prod_h:
-    #                 continue
-
-    #             # Try to place product in stock
-    #             for x in range(stock_w - prod_w + 1):
-    #                 for y in range(stock_h - prod_h + 1):
-    #                     if self._can_place_(stock, (x, y), prod_size):
-    #                         unused_area = stock_w * stock_h - prod_w * prod_h
-    #                         # Optimize: prioritize better placement (lowest unused area)
-    #                         if unused_area < best_unused_area:
-    #                             best_unused_area = unused_area
-    #                             prod_to_cut = prod
-    #                             best_stock_idx = stock_idx
-    #                             best_position = (x, y)
-
-    #     # If no valid action found, return a no-op
-    #     if prod_to_cut is None:
-    #         return {"stock_idx": -1, "size": [0, 0], "position": (0, 0)}
-
-    #     # Return the best action found
-    #     return {
-    #         "stock_idx": best_stock_idx,
-    #         "size": prod_to_cut["size"],
-    #         "position": best_position,
-    #     }
-    
-    
-    
-    
-    # def get_action(self, observation, info):
-    #     list_prods = observation["products"]
-    #     stocks = observation["stocks"]
-
-    #     prod_size = [0, 0]
-    #     stock_idx = -1
-    #     pos_x, pos_y = 0, 0
-
-    #     for prod in list_prods:
-    #         if prod["quantity"] > 0:
-    #             prod_size = prod["size"]
-    #             prod_w, prod_h = prod_size
-    #             best_fitness = float("inf")
-    #             best_action = None
-
-    #             for i, stock in enumerate(stocks):
-    #                 stock_w, stock_h = self._get_stock_size_(stock)
-
-    #                 if stock_w < prod_w or stock_h < prod_h:
-    #                     continue
-
-    #                 for x in range(stock_w - prod_w + 1):
-    #                     for y in range(stock_h - prod_h + 1):
-    #                         if self._can_place_(stock, (x, y), prod_size):
-    #                             unused_area = stock_w * stock_h - prod_w * prod_h
-    #                             if unused_area < best_fitness:
-    #                                 best_fitness = unused_area
-    #                                 best_action = {"stock_idx": i, "size": prod_size, "position": (x, y)}
-
-    #             if best_action:
-    #                 stock_idx = best_action["stock_idx"]
-    #                 pos_x, pos_y = best_action["position"]
-    #                 break
-
-    #     return {"stock_idx": stock_idx, "size": prod_size, "position": (pos_x, pos_y)}
-    
-    
-    # def _initialize_free_regions(self, stock):
-    #     width, height = self._get_stock_size_(stock)
-    #     return [(0, 0, width, height)]  # Entire stock is initially free
-
-    # def _update_free_regions(self, regions, used_region, prod_size):
-    #     x, y, rw, rh = used_region
-    #     pw, ph = prod_size
-
-    #     # Subdivide the remaining free space after placing the product
-    #     new_regions = []
-    #     if rw > pw:
-    #         new_regions.append((x + pw, y, rw - pw, rh))
-    #     if rh > ph:
-    #         new_regions.append((x, y + ph, rw, rh - ph))
-
-    #     # Include unaffected regions
-    #     return [region for region in regions if region != used_region] + new_regions
-
+        return {"stock_idx": -1, "size": [0, 0], "position": (0, 0)}
 
     
-    # def get_action(self, observation, info):
-    #     list_prods = observation["products"]
-    #     stock_idx = -1
-    #     pos_x, pos_y = None, None
-    #     prod_size = [0, 0]
-
-    #     # Maintain a list of free spaces for each stock
-    #     free_regions = [self._initialize_free_regions(stock) for stock in observation["stocks"]]
-
-    #     for prod in list_prods:
-    #         if prod["quantity"] > 0:
-    #             prod_size = prod["size"]
-    #             prod_w, prod_h = prod_size
-
-    #             # Find best fit region across all stocks
-    #             for i, regions in enumerate(free_regions):
-    #                 for region in regions:
-    #                     x, y, rw, rh = region
-    #                     if rw >= prod_w and rh >= prod_h:
-    #                         stock_idx = i
-    #                         pos_x, pos_y = x, y
-
-    #                         # Update free regions
-    #                         free_regions[i] = self._update_free_regions(
-    #                             regions, region, prod_size
-    #                         )
-    #                         break
-    #                 if pos_x is not None and pos_y is not None:
-    #                     break
-
-    #             if stock_idx != -1:
-    #                 break
-
-    #         return {"stock_idx": stock_idx, "size": prod_size, "position": (pos_x, pos_y)}
-
-   
-  # Student code here
-  # You can add more functions if needed
