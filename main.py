@@ -1,7 +1,7 @@
-# import gym_cutting_stock
-# import gymnasium as gym
-# from policy import GreedyPolicy, RandomPolicy
-# from student_submissions.s2210xxx.policy2210xxx import GeneticPolicy
+import gym_cutting_stock
+import gymnasium as gym
+from policy import GreedyPolicy, RandomPolicy
+from student_submissions.s2210xxx.policy2210xxx import GeneticPolicy
 
 # # Create the environment
 # env = gym.make(
@@ -57,11 +57,6 @@
 
 # env.close()
 
-import gym_cutting_stock
-import gymnasium as gym
-from policy import GreedyPolicy, RandomPolicy
-from student_submissions.s2210xxx.policy2210xxx import GeneticPolicy
-
 # Create the environment
 env = gym.make(
     "gym_cutting_stock/CuttingStock-v0",
@@ -71,21 +66,29 @@ NUM_EPISODES = 100
 
 def test_policy(policy, policy_name, env, num_episodes=NUM_EPISODES):
     """Test a given policy on the Cutting Stock environment."""
-    observation, info = env.reset(seed=42)
     print(f"Testing {policy_name}...")
 
-    filled_ratios = []
+    final_filled_ratios = []
 
-    for ep in range(num_episodes):
-        action = policy.get_action(observation, info)
-        observation, reward, terminated, truncated, info = env.step(action)
-        filled_ratios.append(info['filled_ratio'])
-        
-        if terminated or truncated:
-            observation, info = env.reset(seed=ep)
+    # Run the test 5 times
+    for run in range(3):
+        observation, info = env.reset(seed=42)
+      
 
-    avg_filled_ratio = sum(filled_ratios) / len(filled_ratios)
-    print(f"{policy_name} - Average Filled Ratio: {avg_filled_ratio:.4f}")
+        # Simulate for num_episodes
+        for ep in range(num_episodes):
+            action = policy.get_action(observation, info)
+            observation, reward, terminated, truncated, info = env.step(action)
+            if terminated or truncated:
+                observation, info = env.reset(seed=ep)
+
+        # Collect the final filled ratio for this run
+        final_filled_ratios.append(info['filled_ratio'])
+
+    # Compute the average over the 5 final filled ratios
+    avg_filled_ratio = sum(final_filled_ratios) / len(final_filled_ratios)
+    print(f"{policy_name} - Average of Final Filled Ratios (3 runs): {avg_filled_ratio:.4f}")
+
 
 if __name__ == "__main__":
     # Test GreedyPolicy
