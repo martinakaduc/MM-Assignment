@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     # Test GreedyPolicy
     gd_policy = GreedyPolicy()
-    ep = 0
+    ep = 5
     while ep < NUM_EPISODES:
         action = gd_policy.get_action(observation, info)
         observation, reward, terminated, truncated, info = env.step(action)
