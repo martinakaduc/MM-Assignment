@@ -1,136 +1,179 @@
-import os
-import numpy as np
-import torch
-import torch.nn as nn
-import torch.optim as optim
-from torch.distributions import Categorical
+from student_submissions.s2210xxx.AC2 import *  # Importing necessary modules for Actor-Critic model and environment interaction
+import numpy as np  # Importing numpy for numerical operations
+import matplotlib.pyplot as plt  # Importing matplotlib for plotting learning curves
+from policy import Policy  # Importing base Policy class
+import torch  # Importing PyTorch for deep learning functionality
+import torch.nn as nn  # Importing neural network functionalities from PyTorch
+import torch.optim as optim  # Importing optimization functions from PyTorch
+from torch.distributions import Categorical  # Importing Categorical distribution for action sampling
 
 
-# Define a Convolutional Neural Network (CNN) for filtering inputs
-class FilterCNN(nn.Module):
-    def __init__(self, out_dim=3):
-        super(FilterCNN, self).__init__()
-        # Define the layers: two convolutional layers with batch normalization
-        self.conv1 = nn.Conv2d(3, out_dim, kernel_size=1)  # First convolutional layer
-        self.bn1 = nn.LazyBatchNorm2d()  # Batch normalization for the first layer
-        self.conv2 = nn.Conv2d(out_dim, 1, kernel_size=1)  # Second convolutional layer
-        self.bn2 = nn.LazyBatchNorm2d()  # Batch normalization for the second layer
-        # Set the device to GPU if available, else CPU
-        self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        self.to(self.device)  # Move model to the device
+class Policy2210xxx(Policy):
+    def __init__(self, env=None, load_check_pontis=False, policy_id=1):
+        assert policy_id in [1, 2], "Policy ID must be 1 or 2"
+        # Initializing key parameters for the model
+        self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')  # Set device (GPU if available)
+        self.gamma = 0.99  # Discount factor for reward
+        self.n_epochs = 5  # Number of training epochs
+        self.batch_size = 10  # Size of each batch for training
+        self.learning_rate = 0.0003  # Learning rate for the optimizer
 
-    def forward(self, x, mask, bias_mask=None):
-        # Concatenate the input tensor with mask and bias_mask along the channels dimension
-        x = torch.cat([x.unsqueeze(dim=1), mask.unsqueeze(dim=1), bias_mask.unsqueeze(dim=1)], dim=1)
-        # Pass through the first convolution and batch normalization layers
-        x = self.conv1(x)
-        x = self.bn1(x)
-        # Pass through the second convolution and batch normalization layers
-        x = self.conv2(x)
-        x = self.bn2(x)
-        return x
-
-
-# Define the Actor-Critic model for reinforcement learning
-class A2CActorCritic(nn.Module):
-    def __init__(self, filter_out, alpha, chkpt_dir='./s22110xxx/models'):
-        super(A2CActorCritic, self).__init__()
-
-        # Xóa checkpoint và model PPO cũ
-        self.actor = nn.Conv2d(1, 1, kernel_size=1)  # Thay thế bằng mạng actor đơn giản
-        self.filter = FilterCNN(filter_out)
-        self.optimizer = optim.Adam(self.parameters(), lr=alpha)
-        self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        self.to(self.device)
-
-    def forward(self, state):
-        # Extract stock, bias_mask, and mask from input state
-        stock, bias_mask, mask = state[:, 0], state[:, 1], state[:, 2]
-        # Get the output from the filter CNN
-        f = self.filter(stock, mask, bias_mask)
-        # Process output through actor to get action probabilities
-        x = self.actor(f)
-        # Mask out invalid positions (set them to a very low probability)
-        x = x.masked_fill(mask == 0, -1e9)  
-        x = torch.flatten(x, start_dim=-3)  # Flatten the tensor for softmax
-        x = torch.softmax(x, dim=-1)  # Apply softmax for probability distribution
-        # Create a Categorical distribution from the probabilities
-        dist = Categorical(x)
-        # Get the critic's value (state value)
-        value = torch.max(f)  # Use max here for simplicity
-        return dist, value
-    
-
-    def save_checkpoint(self):
-        torch.save(self.state_dict(), 'a2c_model_checkpoint.pth')
-
-    def load_checkpoint(self):
-        self.load_state_dict(torch.load('a2c_model_checkpoint.pth'))
-        self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        self.to(self.device)
+        self.customObs = []  # Initialize empty list for custom observations
+        self.obsInfo = dict()  # Dictionary to store observation info
+        self.filter_out = 1  # Filtering condition (used in Actor-Critic)
+        self.actor_critic = A2CActorCritic(self.filter_out, self.learning_rate)  # Instantiate Actor-Critic model
+        self.env = env  # Environment object
+        if load_check_pontis or env is None:
+            self.actor_critic.load_checkpoint()  # Load saved model checkpoint if necessary
+        self.memory = A2CAgent(self.batch_size)  # Memory object for A2C
+        self.old_action = None  # To store previous action for inference
+        
+        if policy_id == 1:
+            pass
+        elif policy_id == 2:
+            pass
 
 
-# Define the A2C (Advantage Actor-Critic) agent model for reinforcement learning
-class A2CAgent(nn.Module):
-    def __init__(self, input_dim, action_dim, alpha):
-        super(A2CAgent, self).__init__()
-        # Define the actor network (policy) with two fully connected layers
-        self.actor = nn.Sequential(
-            nn.Linear(input_dim, 128),  # First layer: input_dim to 128
-            nn.ReLU(),  # ReLU activation function
-            nn.Linear(128, action_dim),  # Second layer: 128 to action_dim (number of actions)
-            nn.Softmax(dim=-1)  # Softmax to get a probability distribution over actions
-        )
-        # Define the critic network (value function) with two fully connected layers
-        self.critic = nn.Sequential(
-            nn.Linear(input_dim, 128),  # First layer: input_dim to 128
-            nn.ReLU(),  # ReLU activation function
-            nn.Linear(128, 1)  # Second layer: 128 to 1 (single value for value function)
-        )
-        # Adam optimizer for the model parameters
-        self.optimizer = optim.Adam(self.parameters(), lr=alpha)
-        # Set the device to GPU if available, else CPU
-        self.device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-        self.to(self.device)  # Move model to the device
+    def remember(self, state, action, probs, vals, reward, done):
+        # Store current step's memory (state, action, reward, etc.)
+        self.memory.store_memory(state, action, probs, vals, reward, done)
 
-    def forward(self, state):
-        # Convert state to tensor and move it to the device
-        state = torch.tensor(state, dtype=torch.float32).to(self.device)
-        # Get action probabilities and value estimates from the actor and critic networks
-        policy_dist = self.actor(state)
-        value = self.critic(state)
-        return policy_dist, value
+    def save_models(self):
+        # Save model weights to a checkpoint
+        print('... saving models ...')
+        self.actor_critic.save_checkpoint()
 
-    def choose_action(self, state):
-        # Choose action based on current state
-        policy_dist, _ = self.forward(state)
-        dist = Categorical(policy_dist)  # Create a categorical distribution from the policy
-        action = dist.sample()  # Sample an action from the distribution
-        return action.item(), dist.log_prob(action)  # Return the action and its log probability
+    def load_models(self):
+        # Load model weights from a checkpoint
+        print('... loading models ...')
+        self.actor_critic.load_checkpoint()
 
-    def update(self, states, actions, rewards, log_probs, values, gamma):
-        # Compute returns (discounted future rewards)
-        returns = []
-        G = 0
-        for reward in reversed(rewards):
-            G = reward + gamma * G
-            returns.insert(0, G)
-        returns = torch.tensor(returns, dtype=torch.float32).to(self.device)
+    def choose_action(self, observation):
+        # Given an observation, choose an action based on the actor-critic model
+        observation = np.array([observation], dtype=float)
+        state = torch.tensor(observation, dtype=torch.float).to(self.actor_critic.device)  # Convert observation to tensor
+        dist, value = self.actor_critic(state)  # Get action distribution and value from actor-critic model
+        action = dist.sample()  # Sample action from the distribution
 
-        # Convert values and log_probs to tensors
-        values = torch.stack(values).squeeze(-1)
-        log_probs = torch.stack(log_probs)
+        probs = torch.squeeze(dist.log_prob(action)).item()  # Get log probability of the action
+        action = torch.squeeze(action).item()  # Convert action to a scalar
+        value = torch.squeeze(value).item()  # Convert value to a scalar
+        return action, probs, value  # Return chosen action, log probability, and value
 
-        # Compute advantages (difference between returns and value estimates)
-        advantages = returns - values
-        # Compute actor loss (policy loss)
-        actor_loss = -(log_probs * advantages.detach()).mean()
-        # Compute critic loss (value loss)
-        critic_loss = advantages.pow(2).mean()
+    def get_action(self, obs, info):
+        # Main method to decide the next action to take
+        if len(self.customObs) == 0:
+            self.resetCustomObservation(obs)  # Reset custom observation if it's the first step
+            self.stepInfo()  # Print step info
+        else:
+            self.updateCustomObservation(obs, self.old_action)  # Update custom observation using previous action
+        with torch.no_grad():  # No gradient computation needed during inference
+            state = np.array([self.customObs], dtype=float)  # Convert custom observation to array
+            state = torch.tensor(state, dtype=torch.float).to(self.actor_critic.device)  # Convert to tensor
+            dist, value = self.actor_critic(state)  # Get action distribution and value
+            action = torch.argmax(dist.probs).item()  # Select the action with the highest probability
+        convertedAction = self.convertAction(action)  # Convert action to a suitable format for environment
+        reward, done = self.getCustomReward(obs, action)  # Get reward and done status for the selected action
+        self.old_action = action  # Save the current action for the next step
+        if done:
+            self.customObs = []  # Reset custom observation if the episode is done
+        return convertedAction  # Return the action to be executed
 
-        # Total loss is a combination of actor and critic losses
-        loss = actor_loss + 0.5 * critic_loss
-        # Zero the gradients, perform backpropagation, and update the parameters
-        self.optimizer.zero_grad()
-        loss.backward()
-        self.optimizer.step()
+    def stepInfo(self, postInfo=False):
+        # Print information about the current step (e.g., products remaining)
+        count = quantity = 0
+        for p in self.obsInfo["productInfo"]:
+            count += 1
+            quantity += p[3]
+        if postInfo:
+            print(f'Remaining products: {quantity}, intactStock: {len(self.obsInfo["intact"])}')
+        else:
+            print(f'---------------------------------------',
+                  f'\nTotal product types: {count}, products demand: {quantity}, ')
+
+    def train(self, total_timestep, timestep_per_game=200):
+        # Training loop for the agent
+        figure_file = 'rewards.png'  # File to save learning curve plot
+        best_score = -10000  # Initialize best score
+        score_history = []  # List to store scores across episodes
+        learn_iters = 0  # Number of learning iterations
+        avg_score = 0  # Average score across episodes
+        n_steps = 0  # Total steps taken
+        save_freq = total_timestep // 10  # Frequency of saving model
+        cur_save_step = save_freq  # Current save step
+        while n_steps < total_timestep:
+            observation, _ = self.env.reset()  # Reset environment to start a new episode
+            self.resetCustomObservation(observation)  # Reset custom observation
+            done = False  # Initialize done flag
+            score = 0  # Initialize score for this episode
+            game_timestep = 0  # Initialize game timestep
+            self.stepInfo()  # Print step info
+            while not done:
+                action, prob, val = self.choose_action(self.customObs)  # Choose action
+                convertedAction = self.convertAction(action)  # Convert action to suitable format
+                reward, _ = self.getCustomReward(observation, action)  # Get reward for the action
+                observation_, _, done, _, info = self.env.step(convertedAction)  # Take action in the environment
+                n_steps += 1
+                game_timestep += 1
+                score += reward  # Update score
+                self.remember(self.customObs, action, prob, val, reward, done)  # Store memory
+                self.updateCustomObservation(observation_, action)  # Update custom observation
+                if n_steps % self.batch_size == 0:
+                    self.learn()  # Learn from the batch of experiences
+                    learn_iters += 1
+                observation = observation_  # Update observation
+            score_history.append(score)  # Store score for this episode
+            avg_score = np.mean(score_history[-100:])  # Calculate moving average of the score
+            normalized_reward = score / game_timestep  # Normalize the reward
+            if normalized_reward > best_score:
+                best_score = normalized_reward
+                self.save_models()  # Save model if best score
+            if n_steps > cur_save_step:
+                cur_save_step += save_freq
+                self.save_models()  # Save model at specified frequency
+            self.stepInfo(True)  # Print post-episode info
+            print('Game step', game_timestep, 'score %.1f' % score, 'avg score %.1f' % avg_score,
+                  'time_steps', n_steps, 'learning_steps', learn_iters)  # Print stats
+        x = [i + 1 for i in range(len(score_history))]  # Prepare x-axis values for the plot
+        self.save_models()  # Save final model
+        self.plot_learning_curve(x, score_history, figure_file)  # Plot the learning curve
+
+    def learn(self):
+        # Perform learning using A2C algorithm
+        for _ in range(self.n_epochs):
+            state_arr, action_arr, old_prob_arr, vals_arr, reward_arr, dones_arr, batches = \
+                self.memory.generate_batches()  # Generate batches from memory
+
+            values = vals_arr
+            advantage = np.zeros(len(reward_arr), dtype=np.float32)  # Initialize advantage array
+
+            for t in range(len(reward_arr) - 1):
+                discount = 1
+                a_t = 0
+                for k in range(t, len(reward_arr) - 1):
+                    a_t += discount * (reward_arr[k] + self.gamma * values[k + 1] * (1 - int(dones_arr[k])) - values[k])
+                    discount *= self.gamma
+                advantage[t] = a_t
+            advantage = torch.tensor(advantage).to(self.actor_critic.device)  # Convert advantage to tensor
+
+            values = torch.tensor(values).to(self.actor_critic.device)  # Convert values to tensor
+            for batch in batches:
+                states = torch.tensor(state_arr[batch], dtype=torch.float).to(self.actor_critic.device)  # Convert states
+                old_probs = torch.tensor(old_prob_arr[batch]).to(self.actor_critic.device)  # Convert old probabilities
+                actions = torch.tensor(action_arr[batch]).to(self.actor_critic.device)  # Convert actions
+
+                dist, critic_value = self.actor_critic(states)  # Get new distribution and critic value
+                log_prob = dist.log_prob(actions)  # Compute log probability
+                ratio = torch.exp(log_prob - old_probs)  # Compute ratio
+                clipped_ratio = torch.clamp(ratio, 1 - 0.2, 1 + 0.2)  # Clip the ratio to avoid large updates
+                loss1 = -advantage[batch] * ratio  # Policy loss
+                loss2 = -advantage[batch] * clipped_ratio  # Clipped policy loss
+                actor_loss = torch.max(loss1, loss2).mean()  # Final actor loss
+
+                critic_loss = (critic_value - advantage[batch]).pow(2).mean()  # Critic loss
+                total_loss = actor_loss + 0.5 * critic_loss  # Total loss
+
+                self.actor_critic.optimizer.zero_grad()  # Zero gradients
+                total_loss.backward()  # Backpropagate loss
+                self.actor_critic.optimizer.step()  # Update model parameters
+        self.memory.clear_memory()  # Clear memory after learning
