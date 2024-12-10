@@ -340,12 +340,14 @@ class GreedySAPolicy(Policy):
         next_state = current_state.copy()
         prob_list = np.array(overlap_register, dtype = np.float32)
         overlap_num = prob_list.sum()
-        if overlap_num > 0:
-            prob_list += 0.3 * overlap_num / (0.7 * self.num_items - overlap_num)
+        if overlap_num == len(current_state):
+            prob_list /= len(current_state)
+        elif overlap_num > 0:
+            prob_list += 0.3 * overlap_num / (0.7 * len(current_state) - overlap_num)
             prob_list /= prob_list.sum()
         else:
             prob_list += 1
-            prob_list /= self.num_items
+            prob_list /= len(current_state)
 
         # Swap the positions of two randomly selected items that are near each other.
         if random.randint(0, 100) > 50:
