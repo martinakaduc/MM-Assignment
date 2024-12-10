@@ -98,15 +98,44 @@ def test_policy(policy, policy_name, env, num_episodes=NUM_EPISODES):
 if __name__ == "__main__":
     # Test GreedyPolicy
     gd_policy = GreedyPolicy()
-    test_policy(gd_policy, "GreedyPolicy", env)
+    ep = 0
+    while ep < NUM_EPISODES:
+        action = gd_policy.get_action(observation, info)
+        observation, reward, terminated, truncated, info = env.step(action)
+
+        if terminated or truncated:
+            observation, info = env.reset(seed=ep)
+            print(info)
+            ep += 1
+
+    # Reset the environment
+    observation, info = env.reset(seed=42)
 
     # Test RandomPolicy
     rd_policy = RandomPolicy()
-    test_policy(rd_policy, "RandomPolicy", env)
+    ep = 0
+    while ep < NUM_EPISODES:
+        action = rd_policy.get_action(observation, info)
+        observation, reward, terminated, truncated, info = env.step(action)
 
-    # Test GeneticPolicy
-    ga_policy = Policy2310139_2310090_2310191_2310242_2310423()
-    test_policy(ga_policy, "GeneticPolicy", env)
+        if terminated or truncated:
+            observation, info = env.reset(seed=ep)
+            print(info)
+            ep += 1
+
+    # Uncomment the following code to test your policy
+    # # Reset the environment
+    # observation, info = env.reset(seed=42)
+    # print(info)
+
+    # policy2210xxx = Policy2210xxx()
+    # for _ in range(200):
+    #     action = policy2210xxx.get_action(observation, info)
+    #     observation, reward, terminated, truncated, info = env.step(action)
+    #     print(info)
+
+    #     if terminated or truncated:
+    #         observation, info = env.reset()
 
 env.close()
 
