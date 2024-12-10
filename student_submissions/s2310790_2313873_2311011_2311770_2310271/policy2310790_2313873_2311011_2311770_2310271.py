@@ -534,7 +534,8 @@ class RLPolicy(Policy):
                     "demands": product["quantity"]
                 })
 
-            state[1208 + len(observation["products"]) * 20: 1688] = -100
+            if algorithm == "rl":
+                state[1208 + len(observation["products"]) * 20: 1688] = -100
             
             # products_sort contains the indices of products sorted in descending order based on their area.
             products_sort = torch.arange(0, len(products))
