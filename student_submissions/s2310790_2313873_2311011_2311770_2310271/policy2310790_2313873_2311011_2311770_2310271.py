@@ -148,6 +148,45 @@ def Policy2310790_2313873_2311011_2311770_2310271(Policy):
                     stock["right_bound"] = 0
                     stock["top_bound"] = 0
                     break
+              
+    # Calculate energy of the given state.
+    def energy(self, state, step = 0):
+        # Define hyperparameters.
+        overlap_weight = (0.95 + step / 600) ** 9
+        area_weight = 1e-6
+        distance_weight = 5e-10
+
+        overlap = 0
+        distance = 0
+        area = 0
+        stock_register = [False] * self.num_stocks
+
+        overlap_register = [False] * self.num_items
+
+        for i in range(self.num_items):
+            wi, hi, zi, xi, yi = state[i]
+
+            # Calculate the total area of stocks that have been cut.
+            if not stock_register[zi]: 
+                area += self.stocks[zi]["width"] * self.stocks[zi]["height"]
+                stock_register[zi] = True
+
+            # Calculate the total overlapping area and the distance between items.
+            for j in range(i + 1, self.num_items):
+                wj, hj, zj, xj, yj = state[j]
+                if zi == zj:
+                    overlap_area = max(0, min(xi + wi, xj + wj) - max(xi, xj)) * max(0, min(yi + hi, yj + hj) - max(yi, yj))
+                    if overlap_area > 0:
+                        overlap_register[i] = overlap_register[j] = True
+                    overlap += overlap_area
+                    distance += (xi + wi / 2 - xj - wj / 2) ** 2 + (yi + hi / 2 - yj - hj / 2) ** 2
+
+        # Return a tuple containing energy, overlapping area, list of overlap items, and the area of stocks used.
+        return (
+            overlap_weight * overlap + area_weight * area + distance_weight * distance,
+            overlap, overlap_register,
+            area
+        )
 
     # Calculate the probability of transitioning to the next state.
     def transition_probability(self, current_state_energy, next_state_energy, temperature):
