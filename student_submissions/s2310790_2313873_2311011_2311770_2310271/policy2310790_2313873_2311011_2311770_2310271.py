@@ -343,7 +343,7 @@ class GreedySAPolicy(Policy):
         if overlap_num == len(current_state):
             prob_list /= len(current_state)
         elif overlap_num > 0:
-            prob_list += 0.3 * overlap_num / (0.7 * len(current_state) - overlap_num)
+            prob_list += 0.3 * overlap_num / (0.7 * len(current_state) - overlap_num).clip(1e-5)
             prob_list /= prob_list.sum()
         else:
             prob_list += 1
