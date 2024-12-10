@@ -578,7 +578,7 @@ class RLPolicy(Policy):
                     while rotate_product_idx >= len(products) or \
                             products[rotate_product_idx]["quantity"] == 0:
                         reward -= 1
-                        rotate_product_idx = products_sort[i]
+                        rotate_product_idx = products_sort[i].item()
                         i += 1
                         
                     product = products[rotate_product_idx]
@@ -636,7 +636,7 @@ class RLPolicy(Policy):
             else:
                 # Place the items into stocks according to greedy algorithm.
                 for idx in products_sort:
-                    product = products[idx]
+                    product = products[idx.item()]
                     start_idx = 0
                     for _ in range(product["demands"]):
                         # Find the first largest stock where the item can be placed.
