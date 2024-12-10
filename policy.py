@@ -53,16 +53,18 @@ class RandomPolicy(Policy):
                     stock_w, stock_h = self._get_stock_size_(stock)
                     prod_w, prod_h = prod_size
 
-                    if stock_w < prod_w or stock_h < prod_h:
-                        continue
+                    if stock_w >= prod_w and stock_h >= prod_h:
+                        pos_x = random.randint(0, stock_w - prod_w)
+                        pos_y = random.randint(0, stock_h - prod_h)
+                        if self._can_place_(stock, (pos_x, pos_y), prod_size):
+                            break
 
-                    pos_x = random.randint(0, stock_w - prod_w)
-                    pos_y = random.randint(0, stock_h - prod_h)
-
-                    if not self._can_place_(stock, (pos_x, pos_y), prod_size):
-                        continue
-
-                    break
+                    if stock_w >= prod_h and stock_h >= prod_w:
+                        pos_x = random.randint(0, stock_w - prod_h)
+                        pos_y = random.randint(0, stock_h - prod_w)
+                        if self._can_place_(stock, (pos_x, pos_y), prod_size[::-1]):
+                            prod_size = prod_size[::-1]
+                            break
 
                 if pos_x is not None and pos_y is not None:
                     break
@@ -90,22 +92,32 @@ class GreedyPolicy(Policy):
                 for i, stock in enumerate(observation["stocks"]):
                     stock_w, stock_h = self._get_stock_size_(stock)
                     prod_w, prod_h = prod_size
-
-                    if stock_w < prod_w or stock_h < prod_h:
-                        continue
-
-                    pos_x, pos_y = None, None
-                    for x in range(stock_w - prod_w + 1):
-                        for y in range(stock_h - prod_h + 1):
-                            if self._can_place_(stock, (x, y), prod_size):
-                                pos_x, pos_y = x, y
+                    if stock_w >= prod_w and stock_h >= prod_h:
+                        pos_x, pos_y = None, None
+                        for x in range(stock_w - prod_w + 1):
+                            for y in range(stock_h - prod_h + 1):
+                                if self._can_place_(stock, (x, y), prod_size):
+                                    pos_x, pos_y = x, y
+                                    break
+                            if pos_x is not None and pos_y is not None:
                                 break
                         if pos_x is not None and pos_y is not None:
+                            stock_idx = i
                             break
 
-                    if pos_x is not None and pos_y is not None:
-                        stock_idx = i
-                        break
+                    if stock_w >= prod_h and stock_h >= prod_w:
+                        pos_x, pos_y = None, None
+                        for x in range(stock_w - prod_h + 1):
+                            for y in range(stock_h - prod_w + 1):
+                                if self._can_place_(stock, (x, y), prod_size[::-1]):
+                                    prod_size = prod_size[::-1]
+                                    pos_x, pos_y = x, y
+                                    break
+                            if pos_x is not None and pos_y is not None:
+                                break
+                        if pos_x is not None and pos_y is not None:
+                            stock_idx = i
+                            break
 
                 if pos_x is not None and pos_y is not None:
                     break
