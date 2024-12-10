@@ -1,8 +1,8 @@
 from policy import Policy
-from policy import GreedyPolicy
 import numpy as np
 import random
 import math
+
 class SA(Policy):
     def __init__(self, initial_temperature=1000, cooling_rate=0.99, max_iterations=1000, no_improve_limit=100):
         self.initial_temperature = initial_temperature
