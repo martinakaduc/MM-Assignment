@@ -46,9 +46,9 @@ if __name__ == "__main__":
     observation, info = env.reset(seed=42)
     print(info)
 
-    greedy_with_sa_policy = Policy2310790_2313873_2311011_2311770_2310271()
+    policy_2310790_2313873_2311011_2311770_2310271 = Policy2310790_2313873_2311011_2311770_2310271(policy_id = 1)
     for _ in range(200):
-        action = greedy_with_sa_policy.get_action(observation, info)
+        action = policy_2310790_2313873_2311011_2311770_2310271.get_action(observation, info)
         observation, reward, terminated, truncated, info = env.step(action)
         print(info)
 
