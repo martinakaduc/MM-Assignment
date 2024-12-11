@@ -1,19 +1,175 @@
+# from policy import Policy
+# import numpy as np
+
+
+# class Policy2210xxx(Policy):
+#     def __init__(self, policy_id=1):
+#         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
+#         # Student code here
+#         if policy_id == 1:
+#             self.policy_id = policy_id
+#             pass
+#         elif policy_id == 2:
+#             self.policy_id = policy_id
+#             pass
+
+#     def get_action(self, observation, info):
+
+#         if self.policy_id == 1:
+#             list_prods = observation["products"]  # List of products
+#             best_fit = None
+#             best_stock_idx = -1
+#             best_position = None
+#             best_size = None
+
+#             sorted_products = sorted(
+#             (prod for prod in list_prods if prod["quantity"] > 0),
+#             key=lambda p: p["size"][0] * p["size"][1],
+#             reverse=True,
+#         )
+
+#             # Loop through products and find the best fit
+#             for prod in sorted_products:
+#                 if prod["quantity"] > 0:
+#                     prod_size = prod["size"]
+#                     stock_idx = -1
+#                     pos_x, pos_y = None, None
+#                     best_unused_area = float('inf')  # To track the best fit (minimize unused area)
+
+#                     # Loop through all stocks to find the best position for the product
+#                     for i, stock in enumerate(observation["stocks"]):
+#                         stock_w, stock_h = self._get_stock_size_(stock)  # Get stock dimensions
+#                         prod_w, prod_h = prod_size
+
+#                         # Check the stock without rotation
+#                         if stock_w >= prod_w and stock_h >= prod_h:
+#                             position = self._find_best_position(stock, prod_size)
+#                             if position:
+#                                 unused_area = (stock_w * stock_h) - (prod_w * prod_h)
+#                                 if unused_area < best_unused_area:
+#                                     best_unused_area = unused_area
+#                                     best_stock_idx = i
+#                                     best_position = position
+#                                     best_size = prod_size
+
+
+#                         if stock_w >= prod_h and stock_h >= prod_w:
+#                             position = self._find_best_position(stock, prod_size[::-1])
+#                             if position:
+#                                 unused_area = (stock_w * stock_h) - (prod_h * prod_w)
+#                                 if unused_area < best_unused_area:
+#                                     best_unused_area = unused_area
+#                                     best_stock_idx = i
+#                                     best_position = position
+#                                     best_size = prod_size[::-1]
+
+
+#                     if best_position is not None:
+#                         break
+
+#             return {"stock_idx": best_stock_idx, "size": best_size, "position": best_position}
+
+    
+
+#     def _find_best_position(self, stock, prod_size):
+
+#         prod_w, prod_h = prod_size
+#         stock_w, stock_h = self._get_stock_size_(stock)
+
+
+#         for x in range(stock_w - prod_w + 1):
+#             for y in range(stock_h - prod_h + 1):
+#                 if self._can_place_(stock, (x, y), prod_size):
+#                     return (x, y)
+
+#         return None
+
+
+    
+
+
 from policy import Policy
+import numpy as np
 
 
 class Policy2210xxx(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
-
         # Student code here
         if policy_id == 1:
+            self.policy_id = policy_id
             pass
         elif policy_id == 2:
+            self.policy_id = policy_id
             pass
 
     def get_action(self, observation, info):
-        # Student code here
-        pass
 
-    # Student code here
-    # You can add more functions if needed
+        if self.policy_id == 1:
+            list_prods = observation["products"]  # List of products
+            best_fit = None
+            best_stock_idx = -1
+            best_position = None
+            best_size = None
+
+            sorted_products = sorted(
+            (prod for prod in list_prods if prod["quantity"] > 0),
+            key=lambda p: p["size"][0] * p["size"][1],
+            reverse=True,
+        )
+
+            # Loop through products and find the best fit
+            for prod in sorted_products:
+                if prod["quantity"] > 0:
+                    prod_size = prod["size"]
+                    stock_idx = -1
+                    pos_x, pos_y = None, None
+                    best_unused_area = float('inf')  # To track the best fit (minimize unused area)
+
+                    # Loop through all stocks to find the best position for the product
+                    for i, stock in enumerate(observation["stocks"]):
+                        stock_w, stock_h = self._get_stock_size_(stock)  # Get stock dimensions
+                        prod_w, prod_h = prod_size
+
+                        # Check the stock without rotation
+                        if stock_w >= prod_w and stock_h >= prod_h:
+                            position = self._find_best_position(stock, prod_size)
+                            if position:
+                                unused_area = (stock_w * stock_h) - (prod_w * prod_h)
+                                if unused_area < best_unused_area:
+                                    best_unused_area = unused_area
+                                    best_stock_idx = i
+                                    best_position = position
+                                    best_size = prod_size
+
+
+                        if stock_w >= prod_h and stock_h >= prod_w:
+                            position = self._find_best_position(stock, prod_size[::-1])
+                            if position:
+                                unused_area = (stock_w * stock_h) - (prod_h * prod_w)
+                                if unused_area < best_unused_area:
+                                    best_unused_area = unused_area
+                                    best_stock_idx = i
+                                    best_position = position
+                                    best_size = prod_size[::-1]
+
+
+                    if best_position is not None:
+                        break
+
+            return {"stock_idx": best_stock_idx, "size": best_size, "position": best_position}
+
+    
+
+    def _find_best_position(self, stock, prod_size):
+
+        prod_w, prod_h = prod_size
+        stock_w, stock_h = self._get_stock_size_(stock)
+
+
+        for x in range(stock_w - prod_w + 1):
+            for y in range(stock_h - prod_h + 1):
+                if self._can_place_(stock, (x, y), prod_size):
+                    return (x, y)
+
+        return None
