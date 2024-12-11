@@ -3,7 +3,7 @@ import numpy as np
 import random
 import math
 
-class SimulatedAnnealing1(Policy):
+class SimulatedAnnealing(Policy):
     def __init__(self, initial_temperature=1000, cooling_rate=0.95, iterations=100):
         super().__init__()
         self.initial_temperature = initial_temperature
