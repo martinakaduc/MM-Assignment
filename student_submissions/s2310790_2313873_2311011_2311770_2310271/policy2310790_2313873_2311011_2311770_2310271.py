@@ -497,6 +497,7 @@ class RLPolicy(Policy):
             # stocks is a list of stock objects, where each element contains all the relevant information
             # about a particular stock.
             stocks = []
+            max_stock_size = 0
             for i, stock in enumerate(observation["stocks"]):
                 stock_width, stock_height = self._get_stock_size_(stock)
                 if algorithm == "rl":
@@ -510,6 +511,10 @@ class RLPolicy(Policy):
                     "right_bound": 0,
                     "products": []
                 })
+                if stock_width > max_stock_size:
+                    max_stock_size = stock_width
+                if stock_height > max_stock_size:
+                    max_stock_size = stock_height
 
             # stocks_sort contains the indices of stocks sorted in descending order based on their area.
             stocks_sort = torch.arange(0, len(stocks))
@@ -547,9 +552,9 @@ class RLPolicy(Policy):
                 while num_products_left > 0:
                     # Normalize state
                     norm_state = state.clone()
-                    norm_state[:200] = (norm_state[:200] - 75) / 25
-                    norm_state[200:248] = (norm_state[200:248] - 25) / 25
-                    norm_state[248:1208] /= 100
+                    norm_state[:200] = (norm_state[:200] / max_stock_size * 100 - 75) / 25
+                    norm_state[200:248] = (norm_state[200:248] / max_stock_size * 100 - 25) / 25
+                    norm_state[248:1208] = norm_state[248:1208] / max_stock_size
                     norm_state[1208:1688] /= 100
                     self.states.append(norm_state)
 
