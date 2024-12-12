@@ -223,6 +223,18 @@ class GreedySAPolicy(Policy):
                                 break
 
                             if horizontals[k] >= horizontals[i] + product_height:
+                                obstacle = False
+                                for check_space_i in range(i, k):
+                                    for check_space_j in range(j, right_edge):
+                                        if occupied_cells[check_space_i][check_space_j]:
+                                            obstacle = True
+                                            break
+                                    if obstacle:
+                                        break
+                                
+                                if obstacle:
+                                    break
+                                
                                 # Update the grid after the item is placed.
                                 if verticals[j] + product_width < verticals[right_edge]:
                                     verticals.add(verticals[j] + product_width)
