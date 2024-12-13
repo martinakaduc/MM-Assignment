@@ -46,6 +46,7 @@ class FirstFitDecreasingPolicy(Policy):
                                     "position": (x, y),
                                 }
 
+
                     for x in range(stock_w - prod_h + 1):
                         for y in range(stock_h - prod_w + 1):
                             if self._can_place_(stock, (x, y), prod_size[::-1]):
