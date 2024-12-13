@@ -70,24 +70,17 @@ class Policy2352288_2352910_2352761_2353114_2252048(Policy):
 
 
         def _find_candidate_positions(self, stock, prod_size, stock_w, stock_h):
-            """
-            Tìm các vị trí ứng viên đơn giản (cạnh biên trái trên).
-            """
             valid_positions = []
             prod_w, prod_h = prod_size
 
             for x in range(stock_w - prod_w + 1):
                 for y in range(stock_h - prod_h + 1):
-                    # Chỉ xét các vị trí ở góc trái trên hoặc cạnh biên
                     if (x == 0 or y == 0) and self._can_place_(stock, (x, y), prod_size):
                         valid_positions.append((x, y))
 
             return valid_positions
 
         def _compute_waste(self, stock, position, prod_size):
-            """
-            Tính toán vật liệu thừa khi đặt sản phẩm tại vị trí cụ thể.
-            """
             pos_x, pos_y = position
             prod_w, prod_h = prod_size
             temp_stock = stock.copy()
