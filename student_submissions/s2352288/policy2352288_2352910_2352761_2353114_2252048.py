@@ -4,7 +4,7 @@ import random
 from scipy.optimize import linprog
 from scipy.ndimage import label
 
-class Policy2352288(Policy):
+class Policy2352288_2352910_2352761_2353114_2252048(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
         super().__init__()
