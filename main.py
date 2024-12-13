@@ -54,3 +54,5 @@ if __name__ == "__main__":
 
     #     if terminated or truncated:
     #         observation, info = env.reset()
+
+env.close()
