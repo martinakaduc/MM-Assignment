@@ -9,7 +9,7 @@ from torch.distributions import Categorical, Normal
 from student_submissions.s_2311015_2311464_2311616_2112278_2313327.src.genetic import GeneticPolicy
 from student_submissions.s_2311015_2311464_2311616_2112278_2313327.src.RL import ActorCriticPolicy
 
-class Policy2311015_2311464_2311616_2112278_2313327(Policy):
+class Policy2210xxx(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
 
