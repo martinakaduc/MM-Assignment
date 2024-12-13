@@ -1,0 +1,90 @@
+Episode 1-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 8796.0
+	Area wasted ratio:	 0.20615947124173814
+	Time:	 13.00s
+----Simulated Annealing Policy---
+	Area wasted:	 21551.0
+	Area wasted ratio:	 0.38885981848035944
+	Time:	 19.00s
+Episode 2-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 27315.0
+	Area wasted ratio:	 0.27163157947075844
+	Time:	 22.00s
+----Simulated Annealing Policy---
+	Area wasted:	 45568.0
+	Area wasted ratio:	 0.38353028313638354
+	Time:	 28.00s
+Episode 3-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 13661.0
+	Area wasted ratio:	 0.21199236510916963
+	Time:	 22.00s
+----Simulated Annealing Policy---
+	Area wasted:	 51981.0
+	Area wasted ratio:	 0.5058436566401651
+	Time:	 29.00s
+Episode 4-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 25731.0
+	Area wasted ratio:	 0.13241355886848186
+	Time:	 110.00s
+----Simulated Annealing Policy---
+	Area wasted:	 125679.0
+	Area wasted ratio:	 0.42708591740266627
+	Time:	 87.00s
+Episode 5-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 20598.0
+	Area wasted ratio:	 0.1751366793922337
+	Time:	 52.00s
+----Simulated Annealing Policy---
+	Area wasted:	 93084.0
+	Area wasted ratio:	 0.48966580219572114
+	Time:	 49.00s
+Episode 6-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 8835.0
+	Area wasted ratio:	 0.3865167556216642
+	Time:	 4.00s
+----Simulated Annealing Policy---
+	Area wasted:	 18367.0
+	Area wasted ratio:	 0.5670577338684779
+	Time:	 10.00s
+Episode 7-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 41585.0
+	Area wasted ratio:	 0.22427341023940114
+	Time:	 64.00s
+----Simulated Annealing Policy---
+	Area wasted:	 162197.0
+	Area wasted ratio:	 0.5299983988654818
+	Time:	 62.00s
+Episode 8-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 22195.0
+	Area wasted ratio:	 0.15038485513727404
+	Time:	 56.00s
+----Simulated Annealing Policy---
+	Area wasted:	 103151.0
+	Area wasted ratio:	 0.4513397857742929
+	Time:	 56.00s
+Episode 9-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 20763.0
+	Area wasted ratio:	 0.17031556324799646
+	Time:	 58.00s
+----Simulated Annealing Policy---
+	Area wasted:	 109284.0
+	Area wasted ratio:	 0.5193365964928955
+	Time:	 52.00s
+Episode 10-----------------------------
+----Dynamic Programming Policy---
+	Area wasted:	 21659.0
+	Area wasted ratio:	 0.1997215203880272
+	Time:	 39.00s
+----Simulated Annealing Policy---
+	Area wasted:	 90733.0
+	Area wasted ratio:	 0.511114240648941
+	Time:	 39.00s
