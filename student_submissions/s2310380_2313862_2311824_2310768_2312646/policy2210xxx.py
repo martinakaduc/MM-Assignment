@@ -1,7 +1,8 @@
 from policy import Policy
+from .src.ffd_ma.py import FFD_MA
+from .src.knapsackbased.py import KnapsackBased
 
-
-class Policy2210xxx(Policy):
+class Policy2310xxx(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
 
