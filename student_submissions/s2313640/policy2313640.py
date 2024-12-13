@@ -3,7 +3,7 @@ import numpy as np
 import random
 import math
 
-class Policy2210xxx:
+class Policy2313640:
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
         if policy_id == 1:
@@ -240,7 +240,6 @@ class SimulatedAnnealing(Policy):
     def generate_neighbor(self, action, observation):
         neighbor = action.copy()
 
-        # Chọn ngẫu nhiên một stock
         candidate_stock_idx = random.randint(0, len(observation["stocks"]) - 1)
         neighbor["stock_idx"] = candidate_stock_idx
 
