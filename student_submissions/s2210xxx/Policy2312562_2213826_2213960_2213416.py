@@ -3,7 +3,7 @@ import numpy as np
 from policy import Policy
 
 
-class Policy2312562_213826_2213960_2213416(Policy):
+class Policy2312562_2213826_2213960_2213416(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
         self.policy_id = policy_id
@@ -13,8 +13,8 @@ class Policy2312562_213826_2213960_2213416(Policy):
         elif policy_id == 2:
             self.init = False
             self.index = 0
-            self.n_population = 30
-            self.generation = 25
+            self.n_population = 20
+            self.generation = 30
             
 
     def get_action(self, observation, info):
@@ -23,10 +23,8 @@ class Policy2312562_213826_2213960_2213416(Policy):
             self.stocks = observation["stocks"]
             self.products = observation["products"]
             self.population = self.initialize_population([product.copy() for product in self.products], [np.copy(stock) for stock in self.stocks])
-            print("population initialized!")
             for i in range(self.generation):
                 self.population = self.crossover(self.population)
-                print(f"generation {i+1} generated!")
             self.solution = self.population[0]
             self.nb_products = len(self.solution)
             self.init = True
