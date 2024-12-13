@@ -466,7 +466,7 @@ class Policy2210xxx(Policy):
                     matching_cuts.append(cut)
             
             if not matching_cuts:
-                raise ValueError(f"Không tìm thấy pattern phù hợp cho kích thước {order_size}")
+                raise ValueError(f"No suitable place found {order_size}")
             
             best_cut = matching_cuts[0]
             
