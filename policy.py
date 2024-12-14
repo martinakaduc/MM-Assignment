@@ -123,4 +123,3 @@ class GreedyPolicy(Policy):
                     break
 
         return {"stock_idx": stock_idx, "size": prod_size, "position": (pos_x, pos_y)}
-    
