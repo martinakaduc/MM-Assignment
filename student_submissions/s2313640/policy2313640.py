@@ -38,7 +38,7 @@ class ColumnGeneration(Policy):
             )
 
             if all(cost >= 0 for cost in reduced_costs):
-                break  
+                break  # No new column needed
 
             min_cost_idx = np.argmin(reduced_costs)
 
@@ -60,7 +60,7 @@ class ColumnGeneration(Policy):
                     prod_w, prod_h = prod_size
 
                     if stock_w < prod_w or stock_h < prod_h:
-                        continue  
+                        continue 
 
                     free_area = stock_w * stock_h - np.sum(stock != -1)
                     stock_areas.append((i, free_area, stock))
@@ -116,18 +116,21 @@ class ColumnGeneration(Policy):
     def _compute_reduced_cost(self, column, lp_solution, observation):
         product = column["product"]
         prod_size = product["size"]
+        prod_w, prod_h = prod_size
 
-        total_stock_area_before = 0
+        total_waste_before = 0
         for stock in observation["stocks"]:
             stock_w, stock_h = self._get_stock_size_(stock)
-            total_stock_area_before += stock_w * stock_h
+            free_area_before = stock_w * stock_h
+            total_waste_before += free_area_before
 
-        total_stock_area_after = 0
+        total_waste_after = 0
         for stock in observation["stocks"]:
             stock_w, stock_h = self._get_stock_size_(stock)
-            total_stock_area_after += stock_w * stock_h
+            free_area_after = stock_w * stock_h - (prod_w * prod_h)
+            total_waste_after += free_area_after
 
-        reduced_cost = total_stock_area_after - total_stock_area_before
+        reduced_cost = total_waste_before - total_waste_after
 
         return reduced_cost
 
@@ -135,11 +138,11 @@ class ColumnGeneration(Policy):
         stock_w, stock_h = self._get_stock_size_(stock)
         prod_w, prod_h = prod_size
 
-        for y in range(stock_h - prod_h + 1):
-            for x in range(stock_w - prod_w + 1):
-                if self._can_place_(stock, (x, y), prod_size):
-                    return (x, y)
-        return None
+        for i in range(stock_w - prod_w + 1):
+            for j in range(stock_h - prod_h + 1):
+                if self._can_place_(stock, (i, j), prod_size):
+                    return (i, j)
+        return None 
 
 class SimulatedAnnealing(Policy):
     def __init__(self, initial_temperature=1000, cooling_rate=0.95, iterations=100):
