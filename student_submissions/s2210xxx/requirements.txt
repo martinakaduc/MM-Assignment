@@ -1,0 +1,5 @@
+gymnasium
+numpy
+scipy
+typing
+abc
