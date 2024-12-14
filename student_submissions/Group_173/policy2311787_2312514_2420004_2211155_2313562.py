@@ -115,97 +115,82 @@ class Policy2311787_2312514_2420004_2211155_2313562(Policy):
     """"""""""""""""""""""""""""""""""""""""""""""""
 # implement the column generation
     def column_generation(self, observation, info):
-        list_prods = sorted(observation["products"], key=lambda p: -p["quantity"])
+        list_prods = observation["products"]
         best_column = None
         best_weight = float('inf')
 
+        # Iterate over each stock
         for stock_idx, stock in enumerate(observation["stocks"]):
-            stock_w, stock_h = self._get_stock_size_(stock)
+            stock_w, stock_h = self._get_stock_size_(stock)  # Get stock dimensions
 
-            for prod in list_prods:
-                if prod["quantity"] > 0:
-                    prod_size = prod["size"]
+            # Solve Knapsack for width
+            width_items = [(prod["quantity"], prod["size"][1]) for prod in list_prods if prod["quantity"] > 0]
+            width_capacity = stock_w
+            width_value, width_selected = self.solve_knapsack(width_items, width_capacity)
 
-                    valid_positions = self._find_valid_positions(stock, prod_size)
-                    for pos_x, pos_y in valid_positions:
-                        waste = self._calculate_waste(stock, (pos_x, pos_y), prod_size)
+            # Generate patterns from width results
+            for item_idx in width_selected:
+                prod = list_prods[item_idx]
+                prod_size = prod["size"]
 
-                        if waste < best_weight:
-                            best_weight = waste
-                            best_column = {
-                                "stock_idx": stock_idx,
-                                "size": prod_size,
-                                "position": (pos_x, pos_y),
-                            }
-                            if best_weight == 0:
-                                return best_column
+                # Solve Knapsack for length based on selected width pattern
+                length_items = [(1, prod_size[0])]
+                length_capacity = stock_h
+                length_value, length_selected = self.solve_knapsack(length_items, length_capacity)
+
+                # Check placement of the resulting pattern
+                for pos_x in range(stock_w - prod_size[0] + 1):
+                    for pos_y in range(stock_h - prod_size[1] + 1):
+                        if self._can_place_(stock, (pos_x, pos_y), prod_size):
+                            waste = self._calculate_waste(stock, (pos_x, pos_y), prod_size)
+
+                            if waste < best_weight:
+                                best_weight = waste
+                                best_column = {
+                                    "stock_idx": stock_idx,
+                                    "size": prod_size,
+                                    "position": (pos_x, pos_y),
+                                }
+
+                                # Early stop if no waste
+                                if best_weight == 0:
+                                    return best_column
 
         return best_column
 
+    def solve_knapsack(self, items, capacity):
+        n = len(items)
+        dp = [[0] * (capacity + 1) for _ in range(n + 1)]
+
+        for i in range(1, n + 1):
+            value, weight = items[i - 1]
+            for w in range(capacity + 1):
+                if weight > w:
+                    dp[i][w] = dp[i - 1][w]
+                else:
+                    dp[i][w] = max(dp[i - 1][w], dp[i - 1][w - weight] + value)
+
+        # Trace back to find selected items
+        w = capacity
+        selected_items = []
+        for i in range(n, 0, -1):
+            if dp[i][w] != dp[i - 1][w]:
+                selected_items.append(i - 1)
+                w -= items[i - 1][1]
+
+        return dp[n][capacity], selected_items
 
     def _get_stock_size_(self, stock):
-        """
-        Calculate the usable dimensions of the stock.
-
-        Args:
-            stock: 2D numpy array representing the stock.
-
-        Returns:
-            Tuple of (usable width, usable height).
-        """
         stock_w = np.sum(np.any(stock != -2, axis=1))  # Usable width
         stock_h = np.sum(np.any(stock != -2, axis=0))  # Usable height
         return stock_w, stock_h
 
     def _can_place_(self, stock, position, prod_size):
-        """
-        Check if a product can be placed in the stock at the given position.
-
-        Args:
-            stock: 2D numpy array representing the stock.
-            position: Tuple (x, y) for the top-left corner of placement.
-            prod_size: Tuple (width, height) of the product.
-
-        Returns:
-            True if the product can be placed, otherwise False.
-        """
         pos_x, pos_y = position
         prod_w, prod_h = prod_size
         return np.all(stock[pos_x: pos_x + prod_w, pos_y: pos_y + prod_h] == -1)
 
-    def _find_valid_positions(self, stock, prod_size):
-        """
-        Find all valid positions in the stock where the product can be placed.
-
-        Args:
-            stock: 2D numpy array representing the stock.
-            prod_size: Tuple (width, height) of the product.
-
-        Returns:
-            List of valid (x, y) positions.
-        """
-        prod_w, prod_h = prod_size
-        stock_w, stock_h = stock.shape
-
-        valid_positions = []
-        for x in range(stock_w - prod_w + 1):
-            for y in range(stock_h - prod_h + 1):
-                if self._can_place_(stock, (x, y), prod_size):
-                    valid_positions.append((x, y))
-        return valid_positions
-
     def _calculate_waste(self, stock, position, prod_size):
-        """
-        Calculate the waste area for placing a product in the stock.
-
-        Args:
-            stock: 2D numpy array representing the stock.
-            position: Tuple (x, y) for the top-left corner of placement.
-            prod_size: Tuple (width, height) of the product.
-
-        Returns:
-            Waste area (integer).
-        """
         pos_x, pos_y = position
         prod_w, prod_h = prod_size
 
