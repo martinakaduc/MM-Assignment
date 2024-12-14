@@ -1,7 +1,7 @@
 from policy import Policy
 
 
-class Policy2210xxx(Policy):
+class Policy2052417(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
 
@@ -14,17 +14,12 @@ class Policy2210xxx(Policy):
     def get_action(self, observation, info):
         # Student code here
         list_prods = observation["products"]
-
         prod_size = [0, 0]
-        stock_idx = -1
+        stock_idx = -3
         pos_x, pos_y = 0, 0
-
-        # Pick a product that has quality > 0
         for prod in list_prods:
             if prod["quantity"] > 0:
                 prod_size = prod["size"]
-
-                # Loop through all stocks
                 for i, stock in enumerate(observation["stocks"]):
                     stock_w, stock_h = self._get_stock_size_(stock)
                     prod_w, prod_h = prod_size
@@ -41,7 +36,6 @@ class Policy2210xxx(Policy):
                             stock_idx = i
                             break
 
-
                     if stock_w >= prod_h and stock_h >= prod_w:
                         pos_x, pos_y = None, None
                         for x in range(stock_w - prod_h + 1):
@@ -55,12 +49,8 @@ class Policy2210xxx(Policy):
                         if pos_x is not None and pos_y is not None:
                             stock_idx = i
                             break
-
                 if pos_x is not None and pos_y is not None:
                     break
-
         return {"stock_idx": stock_idx, "size": prod_size, "position": (pos_x, pos_y)}
-        
-
     # Student code here
     # You can add more functions if needed
