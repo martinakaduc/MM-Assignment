@@ -299,4 +299,4 @@ class SimulatedAnnealing(Policy):
         return remaining_empty_area
 
     def get_default_action(self):
-        return {"stock_idx": 0, "size": [1, 1], "position": (0, 0)}
+        return {"stock_idx": -1, "size": [0, 0], "position": (0, 0)}
