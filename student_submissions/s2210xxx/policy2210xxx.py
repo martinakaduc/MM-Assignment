@@ -17,18 +17,11 @@ class Policy2210xxx(Policy):
 
         if self.policy_id == 1:
             list_prods = observation["products"]  # List of products
-<<<<<<< HEAD
-=======
             best_fit = None
->>>>>>> 1dc0b3e2dbcb2a1c38fcec2fca987875d57ebbc4
             best_stock_idx = -1
             best_position = None
             best_size = None
-
-<<<<<<< HEAD
             # Sort products by size in descending order
-=======
->>>>>>> 1dc0b3e2dbcb2a1c38fcec2fca987875d57ebbc4
             sorted_products = sorted(
             (prod for prod in list_prods if prod["quantity"] > 0),
             key=lambda p: p["size"][0] * p["size"][1],
@@ -59,11 +52,8 @@ class Policy2210xxx(Policy):
                                     best_position = position
                                     best_size = prod_size
 
-<<<<<<< HEAD
                         # Check the stock rotation
-=======
 
->>>>>>> 1dc0b3e2dbcb2a1c38fcec2fca987875d57ebbc4
                         if stock_w >= prod_h and stock_h >= prod_w:
                             position = self._find_best_position(stock, prod_size[::-1])
                             if position:
@@ -87,10 +77,7 @@ class Policy2210xxx(Policy):
             stock_idx = -1
             pos_x, pos_y = 0, 0
 
-<<<<<<< HEAD
             # Sort products by size in descending order
-=======
->>>>>>> 1dc0b3e2dbcb2a1c38fcec2fca987875d57ebbc4
             sorted_products = sorted(
             (prod for prod in list_prods if prod["quantity"] > 0),
             key=lambda p: p["size"][0] * p["size"][1],
@@ -111,11 +98,7 @@ class Policy2210xxx(Policy):
 
             # If no valid action is found
             return {"stock_idx": -1, "size": [0, 0], "position": (0, 0)}
-<<<<<<< HEAD
-            
-=======
 
->>>>>>> 1dc0b3e2dbcb2a1c38fcec2fca987875d57ebbc4
     
 
     def _find_best_position(self, stock, prod_size):
@@ -129,8 +112,4 @@ class Policy2210xxx(Policy):
                 if self._can_place_(stock, (x, y), prod_size):
                     return (x, y)
 
-<<<<<<< HEAD
         return None
-=======
-        return None
->>>>>>> 1dc0b3e2dbcb2a1c38fcec2fca987875d57ebbc4
