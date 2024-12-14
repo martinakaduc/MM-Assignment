@@ -2,7 +2,7 @@ from policy import Policy
 import numpy as np
 
 
-class Policy2210xxx(Policy):
+class Policy2312453_2312256_2312816_2311529_2213446(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
         # Student code here
@@ -17,16 +17,15 @@ class Policy2210xxx(Policy):
 
         if self.policy_id == 1:
             list_prods = observation["products"]  # List of products
-            best_fit = None
             best_stock_idx = -1
             best_position = None
             best_size = None
-            # Sort products by size in descending order
+
             sorted_products = sorted(
             (prod for prod in list_prods if prod["quantity"] > 0),
             key=lambda p: p["size"][0] * p["size"][1],
             reverse=True,
-            )
+        )
 
             # Loop through products and find the best fit
             for prod in sorted_products:
@@ -52,7 +51,6 @@ class Policy2210xxx(Policy):
                                     best_position = position
                                     best_size = prod_size
 
-                        # Check the stock rotation
 
                         if stock_w >= prod_h and stock_h >= prod_w:
                             position = self._find_best_position(stock, prod_size[::-1])
@@ -72,21 +70,9 @@ class Policy2210xxx(Policy):
         
         elif self.policy_id == 2:
             # Another heuristic: prioritize filling up the largest stock
-            list_prods = observation["products"]
-            prod_size = [0, 0]
-            stock_idx = -1
-            pos_x, pos_y = 0, 0
-
-            # Sort products by size in descending order
-            sorted_products = sorted(
-            (prod for prod in list_prods if prod["quantity"] > 0),
-            key=lambda p: p["size"][0] * p["size"][1],
-            reverse=True,
-            )
-
             for stock_idx, stock in sorted(enumerate(observation["stocks"]), key=lambda s: np.sum(s[1] != -2), reverse=True):
                 stock_w, stock_h = self._get_stock_size_(stock)
-                for prod in sorted_products:
+                for prod in list_prods:
                     if prod["quantity"] > 0:
                         prod_size = prod["size"]
                         if stock_w >= prod_size[0] and stock_h >= prod_size[1]:
@@ -98,7 +84,7 @@ class Policy2210xxx(Policy):
 
             # If no valid action is found
             return {"stock_idx": -1, "size": [0, 0], "position": (0, 0)}
-
+            
     
 
     def _find_best_position(self, stock, prod_size):

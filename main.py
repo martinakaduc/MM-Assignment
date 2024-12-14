@@ -41,12 +41,12 @@ if __name__ == "__main__":
             observation, info = env.reset(seed=ep)
             ep += 1
 
-    # Uncomment the following code to test your policy
+    # # Uncomment the following code to test your policy
     # # Reset the environment
     # observation, info = env.reset(seed=42)
     # print(info)
 
-    # policy2210xxx = Policy2210xxx(policy_id=1)
+    # policy2210xxx = Policy2210xxx(policy_id=2)
     # for _ in range(200):
     #     action = policy2210xxx.get_action(observation, info)
     #     observation, reward, terminated, truncated, info = env.step(action)
