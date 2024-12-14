@@ -1,14 +1,14 @@
 from policy import Policy
 import numpy as np
 
-class Policy2353338_2352166_2353264_1952266_2352690(Policy):
+class Policy2210xxx(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
 
         # Student code here
         class GreedyAreaPackingPolicy(Policy):
             def __init__(self):
-                self.decent_waste = 100
+                self.decent_waste = 500
                 self.stock_counter = 0
                 self.sorted_stocks = []
                 self.stock_indices = []
@@ -51,11 +51,12 @@ class Policy2353338_2352166_2353264_1952266_2352690(Policy):
                             # Try to rotate the product
                             for x in range(stock_w - prod_h + 1):
                                 for y in range(stock_h - prod_w + 1):
-                                    if self._can_place_(temp_stock, (x, y), (prod_h, prod_w)):
+                                    if self._can_place_(temp_stock, (x, y), prod_size[::-1]):
                                         temp_stock[x : x + prod_h, y : y + prod_w] = 0
+                                        prod_size = prod_size[::-1]
                                         self.actions.append({
                                             "stock_idx": stock_idx,
-                                            "size": (prod_h, prod_w),
+                                            "size": prod_size,
                                             "position": (x, y)
                                         })
                                         temp_quantity -= 1
@@ -77,6 +78,7 @@ class Policy2353338_2352166_2353264_1952266_2352690(Policy):
             def get_action(self, observation, info):
                 if self.actions:
                     action = self.actions.pop(0)
+                    # print("action:", action)
                     self.total_products -= 1
                     return action
                 # Step 0: Sort the products and stocks by area in descending order
@@ -130,15 +132,47 @@ class Policy2353338_2352166_2353264_1952266_2352690(Policy):
                 
                 # Double check if self.actions is empty (no solution)
                 if not self.actions:
+                    # print("Double check")
                     i = -1
                     while not self.actions:
                         stock_idx = self.stock_indices[i]
                         stock = self.sorted_stocks[i]
                         area_wasted = self._process_stock(stock, products, stock_idx)
                         i -= 1
+                        if i < -len(self.sorted_stocks):
+                            # print("Out of stocks")
+                            break
+                
+                # Triple check if self.actions is still empty (no solution), use GreedyPolicy
+                if not self.actions:
+                    # print("Triple check")
+                    for prod in products:
+                        # While there are still products to place, find the available stock
+                        while prod["quantity"] > 0:
+                            placed = False
+                            for i, stock in enumerate(observation["stocks"]):
+                                stock_w, stock_h = self._get_stock_size_(stock)
+                                prod_w, prod_h = prod["size"]
+                                for x in range(stock_w - prod_w + 1):
+                                    for y in range(stock_h - prod_h + 1):
+                                        if self._can_place_(stock, (x, y), prod["size"]):
+                                            self.actions.append({
+                                                "stock_idx": i,
+                                                "size": prod["size"],
+                                                "position": (x, y)
+                                            })
+                                            prod["quantity"] -= 1
+                                            placed = True
+                                            break
+                                    if placed:
+                                        break
+                                if placed:
+                                    break
+                
 
                 # Step 3: Return the action
                 action = self.actions.pop(0)
+                # print("action:", action)
                 self.total_products -= 1
                 return action
         
