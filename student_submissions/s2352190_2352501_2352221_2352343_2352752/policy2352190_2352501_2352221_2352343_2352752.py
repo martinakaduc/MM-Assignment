@@ -234,7 +234,7 @@ class Policy2210xxx(Policy):
                         fitlist.append(fit)
                         count +=1
                     continue
-                print("KET QUA LY TUONG")
+                print("Ideal result")
                 widi, heii=self._get_stock_size_(observation["stocks"][0])
                 istocks=widi*heii
                 # print(istocks)
@@ -249,16 +249,16 @@ class Policy2210xxx(Policy):
                 print("AVERAGE IDEAL FIT: ", ifit)
                 print("IDEAL STOCK NUMBER: ", icount)
                 
-                print("BAT DAU DANH GIA")
+                print("Starting evaluation")
                 #print(fitlist)
                 print("Best Fit: ", max(fitlist))
-                print("SO TAM CAN SU DUNG", count)
+                print("Number of stocks", count)
                 avf=(sum(fitlist)/count)
                 print("Average Fit: ", avf)
                 offrate=(avf/ifit)*100
                 print("SO VOI KET QUA LY TUONG DAT: ",offrate,end="")
                 print("%")
-                return "KET THUC DANH GIA"
+                return "End evaluation"
 
 
         
