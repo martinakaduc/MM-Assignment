@@ -38,7 +38,7 @@ class Policy:
         return np.all(stock[pos_x:pos_x + prod_w, pos_y:pos_y + prod_h] == -1)
 
 
-class Policy2210xxx(Policy):
+class Policy2313485_2310037_2312501(Policy):
     def __init__(self, 
                  waste_penalty: float = 0.1, 
                  rotation_enabled: bool = True,
