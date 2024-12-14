@@ -41,6 +41,7 @@ class Policy2210xxx(Policy):
                             stock_idx = i
                             break
 
+
                     if stock_w >= prod_h and stock_h >= prod_w:
                         pos_x, pos_y = None, None
                         for x in range(stock_w - prod_h + 1):
