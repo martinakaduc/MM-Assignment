@@ -8,11 +8,11 @@ env = gym.make(
     "gym_cutting_stock/CuttingStock-v0",
     render_mode="human",  # Comment this line to disable rendering
 )
-NUM_EPISODES = 1
+NUM_EPISODES = 100
 
 if __name__ == "__main__":
     # Reset the environment
-    # observation, info = env.reset(seed=41)
+    observation, info = env.reset(seed=42)
 
     # Test GreedyPolicy
     gd_policy = GreedyPolicy()
@@ -27,7 +27,7 @@ if __name__ == "__main__":
             ep += 1
 
     # Reset the environment
-    observation, info = env.reset(seed=41)
+    observation, info = env.reset(seed=42)
 
     # Test RandomPolicy
     rd_policy = RandomPolicy()
@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     # # Uncomment the following code to test your policy
     # # Reset the environment
-    # observation, info = env.reset(seed=41)
+    # observation, info = env.reset(seed=42)
     # print(info)
 
     # policy2210xxx = Policy2210xxx(policy_id=2)
