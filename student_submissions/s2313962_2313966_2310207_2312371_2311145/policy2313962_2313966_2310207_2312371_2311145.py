@@ -358,10 +358,10 @@ class Policy2313962_2313966_2310207_2312371_2311145(Policy):
                             "size": size,
                             "position": position,
                         }
-                if bestOption:
-                    self.lastStockIndex = bestOption["stock_idx"]
-                    self.usedStocks.add(self.lastStockIndex)
-                    return bestOption
+                    if bestOption:
+                        self.lastStockIndex = bestOption["stock_idx"]
+                        self.usedStocks.add(self.lastStockIndex)
+                        return bestOption
         return {"stock_idx": stockIndex, "size": prodSize, "position": (pos_x, pos_y)}
 
     # get_action function
