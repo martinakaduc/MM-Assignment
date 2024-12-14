@@ -22,8 +22,8 @@ if __name__ == "__main__":
         observation, reward, terminated, truncated, info = env.step(action)
 
         if terminated or truncated:
-            print(info)
             observation, info = env.reset(seed=ep)
+            print(info)
             ep += 1
 
     # Reset the environment
@@ -37,8 +37,8 @@ if __name__ == "__main__":
         observation, reward, terminated, truncated, info = env.step(action)
 
         if terminated or truncated:
-            print(info)
             observation, info = env.reset(seed=ep)
+            print(info)
             ep += 1
 
     # Uncomment the following code to test your policy
