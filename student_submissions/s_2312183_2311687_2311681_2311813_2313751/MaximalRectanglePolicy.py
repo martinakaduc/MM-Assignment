@@ -1,6 +1,6 @@
 from policy import Policy
-from student_submissions.s_2312183_2311687_2311681_2311813_2313751.binmanager import BinManager
-from student_submissions.s_2312183_2311687_2311681_2311813_2313751.item import Item
+from .binmanager import BinManager
+from .item import Item
 
 
 

@@ -19,12 +19,12 @@
 
 
 from policy import Policy
-from student_submissions.s_2312183_2311687_2311681_2311813_2313751.MaximalRectanglePolicy import MaximalRectangle_bestfit
-from student_submissions.s_2312183_2311687_2311681_2311813_2313751.ColumnGenerationPolicy import ColumnGenerationPolicy
+from .MaximalRectanglePolicy import MaximalRectangle_bestfit
+from .ColumnGenerationPolicy import ColumnGenerationPolicy
 
 
 
-class Policy2210xxx(Policy):
+class Policy2312183_2311687_2311681_2311813_2313751(Policy):
 
 
     def __init__(self, policy_id=1):
