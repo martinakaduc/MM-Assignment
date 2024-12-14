@@ -1,4 +1,4 @@
-- Branch and Bound:
+Branch and Bound:
 {'filled_ratio': 0.26, 'trim_loss': 0.0802389096447167}
 {'filled_ratio': 0.19, 'trim_loss': 0.40973695756283224}
 {'filled_ratio': 0.12, 'trim_loss': 0.3976384730556765}
@@ -99,11 +99,11 @@
 {'filled_ratio': 0.17, 'trim_loss': 0.4799563454418672}
 {'filled_ratio': 0.24, 'trim_loss': 0.6328859888700665}
 {'filled_ratio': 0.19, 'trim_loss': 0.39433941765959996}
-+ Average filled_ratio: 0.29
-+ Average trim_loss: 0.39
-+ Average execution time: 36.05(s)
+Average filled_ratio: 0.29
+Average trim_loss: 0.39
+Average execution time: 36.05(s)
 
-- Best Fit: 
+Best Fit: 
 {'filled_ratio': 0.19, 'trim_loss': 0.3553882983059738}
 {'filled_ratio': 0.08, 'trim_loss': 0.21290169993342757}
 {'filled_ratio': 0.17, 'trim_loss': 0.19578219132563987}
@@ -204,6 +204,6 @@
 {'filled_ratio': 0.22, 'trim_loss': 0.14475120178003803}
 {'filled_ratio': 0.17, 'trim_loss': 0.1749380440432412}
 {'filled_ratio': 0.07, 'trim_loss': 0.16729537472313316}
-+ Average filled_ratio: 0.19
-+ Average trim_loss: 0.16
-+ Average execution time: 20.17(s)
+Average filled_ratio: 0.19
+Average trim_loss: 0.16
+Average execution time: 20.17(s)
