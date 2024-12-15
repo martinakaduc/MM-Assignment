@@ -77,7 +77,7 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
             for stock_idx, stock in enumerate(stocks):
                 stock_width, stock_height = self._get_stock_size_(stock)
                 free_area = self._remaining_free_area(stock)
-                
+
                 for orientation in [(prod_width, prod_height), (prod_height, prod_width)]:
                     width, height = orientation
                     if stock_width >= width and stock_height >= height and (width * height <= free_area):
@@ -101,6 +101,7 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
                 not self._is_2_arr_size_same(list_of_stocks_size, self.__list_of_stocks_size) or
                 self._total_of_quantities != self._sum_of_quantities(products)):
             if not self.__list_of_products_size and not self.__list_of_stocks_size:
+                self._reset_attributes()
                 self.__list_of_products_size = self._copy_arr_size(list_of_products_size)
                 self.__list_of_stocks_size = self._copy_arr_size(list_of_stocks_size)
             else:
@@ -139,6 +140,7 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
         best_remain_area = float('inf')
         best_position = None
         best_orientation = None
+
         for stock_idx in self.__list_of_stocks_used:
             stock = stocks[stock_idx]
             stock_width, stock_height = self._get_stock_size_(stock)
@@ -156,6 +158,7 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
                                     best_stock_idx = stock_idx
                                     best_position = (x, y)
                                     best_orientation = orientation
+
         if best_stock_idx != -1:
             self.__current_idx += 1
             if self.__current_idx >= len(self.__list_of_sorted_products_indexes):
@@ -168,6 +171,7 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
                 "size": best_orientation,
                 "position": best_position
             }
+
         next_stock = len(self.__list_of_stocks_used)
         self.__list_of_stocks_used.append(next_stock)
 
