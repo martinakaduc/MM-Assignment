@@ -1,3 +1,4 @@
 gymnasium
-# gym_cutting_stock @ git+https://github.com/martinakaduc/gym-cutting-stock
-gym_cutting_stock @ file:///C:/Users/TRONG%20DAT/Documents/.MyCode/.Python/MODULE/gym%20cutting%20stock
+gym_cutting_stock @ git+https://github.com/martinakaduc/gym-cutting-stock
+torch
+numpy
