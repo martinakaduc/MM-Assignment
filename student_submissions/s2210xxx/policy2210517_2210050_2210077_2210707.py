@@ -27,18 +27,13 @@ class ColGenPolicy(Policy):
         self.patterns = None  # Patterns for column generation
 
     def initialize(self, observation):
-        """
-        Initialize the policy with the observation data.
-        """
+        # Initialize the policy with observation data
         self.products = observation["products"]
         stock_example = observation["stocks"][0]
         self.stock_size = self._get_stock_size_(stock_example)
         self.patterns = []  # Initialize an empty list of patterns
 
     def get_action(self, observation, info):
-        """
-        Generate the best placement for products using column generation.
-        """
         # Ensure initialization is done at the start
         if self.products is None or self.stock_size is None:
             self.initialize(observation)
@@ -104,9 +99,7 @@ class ColGenPolicy(Policy):
         }
 
     def _find_position_(self, stock, product_size):
-        """
-        Find a position in the stock where the product can be placed.
-        """
+        # Find a position in the stock where the product can be placed
         stock_width, stock_height = self._get_stock_size_(stock)
         product_width, product_height = product_size
 
@@ -119,3 +112,4 @@ class ColGenPolicy(Policy):
 
         # Return None if no valid position is found
         return None, None
+
