@@ -1,0 +1,28 @@
+[MM241 - Assignment] Cutting stock problem (2D - CSP) _- Team 28_
+----
+This is our contribution about this 2D - CSP. This description consists of  3 part:
+1. List of our member
+2. Our alogrithm 
+3. Result (Time, Trim loss and field ratio)
+
+| Students       | Students' ID      | Group        |
+|-------------|------------|--------------|
+| Trần Phan Đăng Khôi  | 2352626 | Group CC01 - Team 28  |
+| Đinh Ngụy Nguyệt Hà | 2352286 | Group CN02 - Team 28|
+| Vũ Nhật Minh | 2352769 | Group CN02 - Team 28   |
+| Nguyễn Lê Minh Nhật | 2352860 | Group CN02 - Team 28|
+| Nguyễn Kiến Quốc | 2353028 | Group CN02 - Team 28 |
+
+2. In this 2D - CSP, we use 2 solutions:
+- HeuristicOptimzer which is the combination of 2SGP and 3SHP.
+- Advantage Actor-Critic Algorithm, which is known as A2C solution.
+* We have mentioned these alogrithm in our report clearly.
+
+3. Result
+**A2C**
+![A2C](https://github.com/user-attachments/assets/c3f5ac95-d26c-4fbf-a06e-9b787fc857df)
+
+**Heuristic** 
+![heuristic](https://github.com/user-attachments/assets/55d978bb-4455-473d-b0ef-119402343547)
+
+
