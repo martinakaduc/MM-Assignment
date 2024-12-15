@@ -9,13 +9,13 @@ class Policy2312332_2312197_2311957_2312949(Policy):
 
         # Student code here
         if policy_id == 1:
-            pass
+            self.policy = FirstFitDecreasingPolicy()
         elif policy_id == 2:
-            pass
+            self.policy = AnnealingPolicy()
 
     def get_action(self, observation, info):
         # Student code here
-        pass
+        return self.get_action(observation, info)
 
     # Student code here
     # You can add more functions if needed
