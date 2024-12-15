@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
     # Uncomment the following code to test your policy
     # Reset the environment
-    observation, info = env.reset(seed=42)
+    observation, info = env.reset()
     print(info)
 
     policy2210xxx = Policy2210517_2210050_2210077_2210707(policy_id=1)
@@ -55,5 +55,6 @@ if __name__ == "__main__":
         if terminated or truncated:
             # input("Press Enter to continue.")
             observation, info = env.reset()
+            # policy2210xxx = Policy2210517_2210050_2210077_2210707(policy_id=1)
 
 env.close()

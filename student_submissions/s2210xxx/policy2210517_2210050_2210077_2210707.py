@@ -5,18 +5,22 @@ class Policy2210517_2210050_2210077_2210707(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
 
-        # Student code here
+        # Initialize the chosen policy
         if policy_id == 1:
             self.policy = ColGenPolicy()
         elif policy_id == 2:
             self.policy = RandomPolicy()
 
     def get_action(self, observation, info):
-        # Student code here
+        """Ensure the policy is reinitialized if needed (in case of environment reset)."""
+        # Check if the policy is an instance of ColGenPolicy and reinitialize if necessary
+        if isinstance(self.policy, ColGenPolicy):
+            # Ensure ColGenPolicy's state is updated
+            self.policy.update_state(observation)  # Update the state with the new observation
+        
+        # Get action from the selected policy
         return self.policy.get_action(observation, info)
 
-    # Student code here
-    # You can add more functions if needed
 
 class ColGenPolicy(Policy):
     def __init__(self):
@@ -26,17 +30,22 @@ class ColGenPolicy(Policy):
         self.stock_size = None  # Dimensions of the stock (width, height)
         self.patterns = None  # Patterns for column generation
 
-    def initialize(self, observation):
-        # Initialize the policy with observation data
+    def update_state(self, observation):
+        """Update the internal state of the policy based on the new observation."""
+        # This method will update the attributes based on the new observation
         self.products = observation["products"]
-        stock_example = observation["stocks"][0]
+        stock_example = observation["stocks"][0]  # Use the first stock example
         self.stock_size = self._get_stock_size_(stock_example)
-        self.patterns = []  # Initialize an empty list of patterns
+        self.patterns = []  # Clear and update patterns if necessary
+
+    def initialize(self, observation):
+        """Initialize the policy with observation data (called only once)."""
+        self.update_state(observation)  # Initialize using the update_state method
 
     def get_action(self, observation, info):
-        # Ensure initialization is done at the start
-        if self.products is None or self.stock_size is None:
-            self.initialize(observation)
+        """Determine the next action, ensure the policy state is updated."""
+        # Update the state with the latest observation data
+        self.update_state(observation)
 
         # Initial placeholders for the action
         selected_stock_idx, selected_x, selected_y = -1, None, None
@@ -103,7 +112,7 @@ class ColGenPolicy(Policy):
         }
 
     def _find_position_(self, stock, product_size):
-        # Find a position in the stock where the product can be placed
+        """Find a position in the stock where the product can be placed."""
         stock_width, stock_height = self._get_stock_size_(stock)
         product_width, product_height = product_size
 
