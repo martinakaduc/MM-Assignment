@@ -100,12 +100,9 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
         if (not self._is_2_arr_size_same(list_of_products_size, self.__list_of_products_size) or
                 not self._is_2_arr_size_same(list_of_stocks_size, self.__list_of_stocks_size) or
                 self._total_of_quantities != self._sum_of_quantities(products)):
-            if not self.__list_of_products_size and not self.__list_of_stocks_size:
                 self._reset_attributes()
                 self.__list_of_products_size = self._copy_arr_size(list_of_products_size)
                 self.__list_of_stocks_size = self._copy_arr_size(list_of_stocks_size)
-            else:
-                self._reset_attributes()
 
         if not self.__list_of_sorted_products_indexes:
             self.__list_of_sorted_products_indexes = sorted(
