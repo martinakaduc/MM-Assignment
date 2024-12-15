@@ -8,7 +8,7 @@ from random import randint, shuffle, random, choice, choices
 import time 
 from policy import Policy
 
-class Policy2210xxx(Policy):
+class Policy2213054_2213858_2210147_2212113(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
         
