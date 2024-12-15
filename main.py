@@ -53,7 +53,7 @@ if __name__ == "__main__":
         print(info)
 
         if terminated or truncated:
+            # input("Press Enter to continue.")
             observation, info = env.reset()
-            input("Press Enter to continue.")
 
 env.close()

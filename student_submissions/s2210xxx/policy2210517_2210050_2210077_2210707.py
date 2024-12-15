@@ -38,6 +38,7 @@ class ColGenPolicy(Policy):
         if self.products is None or self.stock_size is None:
             self.initialize(observation)
 
+        # Initial placeholders for the action
         selected_stock_idx, selected_x, selected_y = -1, None, None
         selected_product_size = None
         optimal_placement = None
@@ -90,6 +91,9 @@ class ColGenPolicy(Policy):
         # If a valid placement is found, update the selected placement details
         if optimal_placement:
             selected_stock_idx, selected_x, selected_y, selected_product_size = optimal_placement
+        else:
+            # If no valid placement was found, handle the case appropriately
+            selected_stock_idx, selected_x, selected_y, selected_product_size = -1, 0, 0, (0, 0)  # Default action
 
         # Return the placement action
         return {
