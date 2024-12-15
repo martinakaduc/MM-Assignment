@@ -35,7 +35,10 @@ class Policy2352704_2352814_2352564_2352691_2353140(Policy):
                 for product in observation["products"]:
                     self.total_area_of_products += self._get_product_area_(product["size"]) * product["quantity"]
                     self.product_counter += product["quantity"]
-                self.list_products = list(enumerate(observation["products"]))
+                self.list_products = sorted(
+                    enumerate(observation["products"]), 
+                    key = lambda product: -self._get_product_area_(product[1]["size"])
+                )
                 self.sorted_stocks = sorted(
                     [{
                         "idx": stock_index, 
