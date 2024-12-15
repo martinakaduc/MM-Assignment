@@ -2,7 +2,7 @@ from policy import Policy
 import numpy as np
 
 
-class Policy2352601_2352832_2352699_2358570_2353226(Policy):
+class Policy2352601_2352832_2352699_2352857_2353226(Policy):
     # with can_place and return pos, we need to pass the column first, and then row => (column,row)
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
