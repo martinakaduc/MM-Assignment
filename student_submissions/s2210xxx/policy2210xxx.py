@@ -80,18 +80,20 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
             for stock_idx, stock in enumerate(stocks):
                 stock_width, stock_height = self._get_stock_size_(stock)
                 free_area = self._remaining_free_area(stock)
-                if stock_width >= prod_width and stock_height >= prod_height and (prod_width * prod_height <= free_area):
-                    for x in range(stock_width - prod_width + 1):
-                        for y in range(stock_height - prod_height + 1):
-                            if self._can_place_(stock, (x, y), (prod_width, prod_height)):
-                                return {
-                                    "stock_idx": stock_idx,
-                                    "size": (prod_width, prod_height),
-                                    "position": (x, y)
-                                }
+                
+                for orientation in [(prod_width, prod_height), (prod_height, prod_width)]:
+                    width, height = orientation
+                    if stock_width >= width and stock_height >= height and (width * height <= free_area):
+                        for x in range(stock_width - width + 1):
+                            for y in range(stock_height - height + 1):
+                                if self._can_place_(stock, (x, y), orientation):
+                                    return {
+                                        "stock_idx": stock_idx,
+                                        "size": orientation,
+                                        "position": (x, y)
+                                    }
 
         return {"stock_idx": -1, "size": [0, 0], "position": (0, 0)}
-
     def best_fit_decreasing_height(self, observation):
         """
         Implements the Best Fit Decreasing Height algorithm.
@@ -187,4 +189,5 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
         return {
             "stock_idx": next_stock,
             "size": product_size,
-            "position": (0, 0)  }
+            "position": (0, 0)
+        }
