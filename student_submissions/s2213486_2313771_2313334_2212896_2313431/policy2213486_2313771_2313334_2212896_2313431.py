@@ -139,7 +139,6 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
         best_remain_area = float('inf')
         best_position = None
         best_orientation = None
-
         for stock_idx in self.__list_of_stocks_used:
             stock = stocks[stock_idx]
             stock_width, stock_height = self._get_stock_size_(stock)
@@ -157,7 +156,6 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
                                     best_stock_idx = stock_idx
                                     best_position = (x, y)
                                     best_orientation = orientation
-
         if best_stock_idx != -1:
             self.__current_idx += 1
             if self.__current_idx >= len(self.__list_of_sorted_products_indexes):
@@ -170,7 +168,6 @@ class Policy2213486_2313771_2313334_2212896_2313431(Policy):
                 "size": best_orientation,
                 "position": best_position
             }
-
         next_stock = len(self.__list_of_stocks_used)
         self.__list_of_stocks_used.append(next_stock)
 
