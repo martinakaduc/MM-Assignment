@@ -71,9 +71,7 @@ class Policy2310944_2310197_2310182_2311831(Policy):
 
         self.population_size = population_size
         self.generations = generations
-        self.best_fit_policy = BestFitPolicy()
 
-    def get_action(self, observation, info):
         products = sorted(
             [prod for prod in observation["products"] if prod["quantity"] > 0],
             key=lambda p: p["size"][0] * p["size"][1],
