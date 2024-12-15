@@ -1,0 +1,2923 @@
+My computer compile too long for 100 episodes so i just set to 10 . This is the result : 
+Episode 1:
+Waste: 999000
+Filled Ratio: 0.00
+Execution time: 0.000190 seconds
+Episode 1:
+Waste: 998000
+Filled Ratio: 0.00
+Execution time: 0.008314 seconds
+Episode 1:
+Waste: 997000
+Filled Ratio: 0.00
+Execution time: 0.006009 seconds
+Episode 1:
+Waste: 996000
+Filled Ratio: 0.00
+Execution time: 0.035957 seconds
+Episode 1:
+Waste: 995000
+Filled Ratio: 0.01
+Execution time: 0.033643 seconds
+Episode 1:
+Waste: 994000
+Filled Ratio: 0.01
+Execution time: 0.033628 seconds
+Episode 1:
+Waste: 994000
+Filled Ratio: 0.01
+Execution time: 0.023096 seconds
+Episode 1:
+Waste: 993950
+Filled Ratio: 0.01
+Execution time: 0.009016 seconds
+Episode 1:
+Waste: 993900
+Filled Ratio: 0.01
+Execution time: 0.018594 seconds
+Episode 1:
+Waste: 993850
+Filled Ratio: 0.01
+Execution time: 0.008638 seconds
+Episode 1:
+Waste: 993800
+Filled Ratio: 0.01
+Execution time: 0.012038 seconds
+Episode 1:
+Waste: 993750
+Filled Ratio: 0.01
+Execution time: 0.033771 seconds
+Episode 1:
+Waste: 993700
+Filled Ratio: 0.01
+Execution time: 0.036870 seconds
+Episode 1:
+Waste: 993650
+Filled Ratio: 0.01
+Execution time: 0.031429 seconds
+Episode 1:
+Waste: 993600
+Filled Ratio: 0.01
+Execution time: 0.024477 seconds
+Episode 1:
+Waste: 993550
+Filled Ratio: 0.01
+Execution time: 0.031101 seconds
+Episode 1:
+Waste: 993000
+Filled Ratio: 0.01
+Execution time: 0.002445 seconds
+Episode 1:
+Waste: 992450
+Filled Ratio: 0.01
+Execution time: 0.063441 seconds
+Episode 1:
+Waste: 990735
+Filled Ratio: 0.01
+Execution time: 0.041891 seconds
+Episode 1:
+Waste: 989020
+Filled Ratio: 0.01
+Execution time: 0.028550 seconds
+Episode 1:
+Waste: 987305
+Filled Ratio: 0.01
+Execution time: 0.029797 seconds
+Episode 1:
+Waste: 985590
+Filled Ratio: 0.01
+Execution time: 0.031065 seconds
+Episode 1:
+Waste: 983875
+Filled Ratio: 0.02
+Execution time: 0.035003 seconds
+Episode 1:
+Waste: 982160
+Filled Ratio: 0.02
+Execution time: 0.033480 seconds
+Episode 1:
+Waste: 980445
+Filled Ratio: 0.02
+Execution time: 0.088991 seconds
+Episode 1:
+Waste: 978730
+Filled Ratio: 0.02
+Execution time: 0.073204 seconds
+Episode 1:
+Waste: 977015
+Filled Ratio: 0.02
+Execution time: 0.081437 seconds
+Episode 1:
+Waste: 975300
+Filled Ratio: 0.02
+Execution time: 0.095285 seconds
+Episode 1:
+Waste: 975210
+Filled Ratio: 0.02
+Execution time: 0.039996 seconds
+Episode 1:
+Waste: 975120
+Filled Ratio: 0.02
+Execution time: 0.043810 seconds
+Episode 1:
+Waste: 975030
+Filled Ratio: 0.02
+Execution time: 0.054456 seconds
+Episode 1:
+Waste: 974940
+Filled Ratio: 0.03
+Execution time: 0.076703 seconds
+Episode 1:
+Waste: 973302
+Filled Ratio: 0.03
+Execution time: 0.046556 seconds
+Episode 1:
+Waste: 971664
+Filled Ratio: 0.03
+Execution time: 0.075185 seconds
+Episode 1:
+Waste: 970026
+Filled Ratio: 0.03
+Execution time: 0.103221 seconds
+Episode 1:
+Waste: 968388
+Filled Ratio: 0.03
+Execution time: 0.106414 seconds
+Episode 1:
+Waste: 966750
+Filled Ratio: 0.03
+Execution time: 0.138751 seconds
+Episode 1:
+Waste: 965112
+Filled Ratio: 0.03
+Execution time: 0.125813 seconds
+Episode 1:
+Waste: 963474
+Filled Ratio: 0.04
+Execution time: 0.126529 seconds
+Episode 1:
+Waste: 963474
+Filled Ratio: 0.04
+Execution time: 0.101144 seconds
+Episode 1:
+Waste: 963351
+Filled Ratio: 0.04
+Execution time: 0.028590 seconds
+Episode 1:
+Waste: 963228
+Filled Ratio: 0.04
+Execution time: 0.027489 seconds
+Episode 1:
+Waste: 963105
+Filled Ratio: 0.04
+Execution time: 0.027882 seconds
+Episode 1:
+Waste: 962982
+Filled Ratio: 0.04
+Execution time: 0.022058 seconds
+Episode 1:
+Waste: 962859
+Filled Ratio: 0.04
+Execution time: 0.025129 seconds
+Episode 1:
+Waste: 962859
+Filled Ratio: 0.04
+Execution time: 0.058917 seconds
+Episode 1:
+Waste: 961699
+Filled Ratio: 0.04
+Execution time: 0.137388 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.160301 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.168587 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.056766 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.061856 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.118380 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.128597 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.177251 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.187603 seconds
+Episode 1:
+Waste: 960539
+Filled Ratio: 0.04
+Execution time: 0.179066 seconds
+Episode 1:
+Waste: 959361
+Filled Ratio: 0.04
+Execution time: 0.167809 seconds
+Episode 1:
+Waste: 958183
+Filled Ratio: 0.04
+Execution time: 0.168489 seconds
+Episode 1:
+Waste: 957005
+Filled Ratio: 0.04
+Execution time: 0.187723 seconds
+Episode 1:
+Waste: 955827
+Filled Ratio: 0.04
+Execution time: 0.171175 seconds
+Episode 1:
+Waste: 954649
+Filled Ratio: 0.05
+Execution time: 0.166240 seconds
+Episode 1:
+Waste: 953471
+Filled Ratio: 0.05
+Execution time: 0.234888 seconds
+Episode 1:
+Waste: 952293
+Filled Ratio: 0.05
+Execution time: 0.268512 seconds
+Episode 1:
+Waste: 951115
+Filled Ratio: 0.05
+Execution time: 0.281399 seconds
+Episode 1:
+Waste: 951115
+Filled Ratio: 0.05
+Execution time: 0.290074 seconds
+Episode 1:
+Waste: 950395
+Filled Ratio: 0.05
+Execution time: 0.128696 seconds
+Episode 1:
+Waste: 949675
+Filled Ratio: 0.05
+Execution time: 0.204657 seconds
+Episode 1:
+Waste: 948955
+Filled Ratio: 0.05
+Execution time: 0.223597 seconds
+Episode 1:
+Waste: 948235
+Filled Ratio: 0.05
+Execution time: 0.264901 seconds
+Episode 1:
+Waste: 947515
+Filled Ratio: 0.05
+Execution time: 0.276170 seconds
+Episode 1:
+Waste: 946795
+Filled Ratio: 0.05
+Execution time: 0.289161 seconds
+Episode 1:
+Waste: 946075
+Filled Ratio: 0.05
+Execution time: 0.309007 seconds
+Episode 1:
+Waste: 945355
+Filled Ratio: 0.05
+Execution time: 0.325722 seconds
+Episode 1:
+Waste: 944635
+Filled Ratio: 0.06
+Execution time: 0.354957 seconds
+Episode 1:
+Waste: 943915
+Filled Ratio: 0.06
+Execution time: 0.339590 seconds
+Episode 1:
+Waste: 943390
+Filled Ratio: 0.06
+Execution time: 0.065199 seconds
+Episode 1:
+Waste: 942865
+Filled Ratio: 0.06
+Execution time: 0.073720 seconds
+Episode 1:
+Waste: 942865
+Filled Ratio: 0.06
+Execution time: 0.095339 seconds
+Episode 1:
+Waste: 942515
+Filled Ratio: 0.06
+Execution time: 0.076784 seconds
+Episode 1:
+Waste: 942165
+Filled Ratio: 0.06
+Execution time: 0.081638 seconds
+Episode 1:
+Waste: 941815
+Filled Ratio: 0.06
+Execution time: 0.097780 seconds
+Episode 1:
+Waste: 941465
+Filled Ratio: 0.06
+Execution time: 0.097449 seconds
+Episode 1:
+Waste: 941115
+Filled Ratio: 0.06
+Execution time: 0.150462 seconds
+Episode 1:
+Waste: 940765
+Filled Ratio: 0.06
+Execution time: 0.158152 seconds
+Episode 1:
+Waste: 940415
+Filled Ratio: 0.06
+Execution time: 0.196934 seconds
+Episode 1:
+Waste: 940065
+Filled Ratio: 0.06
+Execution time: 0.188773 seconds
+Episode 1:
+Waste: 940065
+Filled Ratio: 0.06
+Execution time: 0.251774 seconds
+Episode 1:
+Waste: 939585
+Filled Ratio: 0.06
+Execution time: 0.067940 seconds
+Episode 1:
+Waste: 939105
+Filled Ratio: 0.06
+Execution time: 0.104354 seconds
+Episode 1:
+Waste: 938625
+Filled Ratio: 0.06
+Execution time: 0.250460 seconds
+Episode 1:
+Waste: 938145
+Filled Ratio: 0.06
+Execution time: 0.321909 seconds
+Episode 1:
+Waste: 938145
+Filled Ratio: 0.06
+Execution time: 0.307894 seconds
+Episode 1:
+Waste: 937905
+Filled Ratio: 0.06
+Execution time: 0.033288 seconds
+Episode 1:
+Waste: 937665
+Filled Ratio: 0.06
+Execution time: 0.072342 seconds
+Episode 1:
+Waste: 937425
+Filled Ratio: 0.06
+Execution time: 0.230042 seconds
+Episode 1:
+Waste: 937185
+Filled Ratio: 0.06
+Execution time: 0.233469 seconds
+Episode 1:
+Waste: 936945
+Filled Ratio: 0.06
+Execution time: 0.257851 seconds
+Episode 1:
+Waste: 936705
+Filled Ratio: 0.06
+Execution time: 0.286301 seconds
+Episode 1:
+Waste: 936465
+Filled Ratio: 0.06
+Execution time: 0.286987 seconds
+Episode 1:
+Waste: 936225
+Filled Ratio: 0.06
+Execution time: 0.307754 seconds
+Episode 1:
+Waste: 935985
+Filled Ratio: 0.06
+Execution time: 0.347466 seconds
+Episode 1:
+Waste: 935985
+Filled Ratio: 0.06
+Execution time: 0.374923 seconds
+Episode 1:
+Waste: 935877
+Filled Ratio: 0.06
+Execution time: 0.029714 seconds
+Episode 1:
+Waste: 935853
+Filled Ratio: 0.06
+Execution time: 0.026070 seconds
+Episode 1:
+Waste: 935829
+Filled Ratio: 0.06
+Execution time: 0.029564 seconds
+Episode 1:
+Waste: 935805
+Filled Ratio: 0.06
+Execution time: 0.071230 seconds
+Episode 1:
+Waste: 935781
+Filled Ratio: 0.06
+Execution time: 0.055977 seconds
+Episode 1:
+Waste: 935757
+Filled Ratio: 0.06
+Execution time: 0.063157 seconds
+Episode 1:
+Waste: 935733
+Filled Ratio: 0.06
+Execution time: 0.059374 seconds
+Episode 1:
+Waste: 935733
+Filled Ratio: 0.06
+Execution time: 0.061251 seconds
+Episode 1:
+Waste: 935513
+Filled Ratio: 0.06
+Execution time: 0.093019 seconds
+Episode 1:
+Waste: 935293
+Filled Ratio: 0.06
+Execution time: 0.243187 seconds
+Episode 1:
+Waste: 935103
+Filled Ratio: 0.06
+Execution time: 0.079639 seconds
+Episode 1:
+Waste: 934913
+Filled Ratio: 0.07
+Execution time: 0.280571 seconds
+Episode 1:
+Waste: 934723
+Filled Ratio: 0.07
+Execution time: 0.363314 seconds
+Episode 1:
+Waste: 934533
+Filled Ratio: 0.07
+Execution time: 0.336826 seconds
+Episode 1:
+Waste: 934343
+Filled Ratio: 0.07
+Execution time: 0.332805 seconds
+Episode 1:
+Waste: 934211
+Filled Ratio: 0.07
+Execution time: 0.147124 seconds
+Episode 1:
+Waste: 934079
+Filled Ratio: 0.07
+Execution time: 0.153243 seconds
+Episode 1:
+Waste: 933947
+Filled Ratio: 0.07
+Execution time: 0.235839 seconds
+Episode 1:
+Waste: 933815
+Filled Ratio: 0.07
+Execution time: 0.304789 seconds
+Episode 1:
+Waste: 933683
+Filled Ratio: 0.07
+Execution time: 0.284639 seconds
+Episode 1:
+Waste: 933551
+Filled Ratio: 0.07
+Execution time: 0.339774 seconds
+Episode 1:
+Waste: 933419
+Filled Ratio: 0.07
+Execution time: 0.429211 seconds
+Episode 1:
+Waste: 933287
+Filled Ratio: 0.07
+Execution time: 0.427143 seconds
+Episode 2:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.000157 seconds
+Episode 2:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.002651 seconds
+Episode 2:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.015298 seconds
+Episode 2:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.016493 seconds
+Episode 2:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.032434 seconds
+Episode 2:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.032798 seconds
+Episode 2:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.039087 seconds
+Episode 2:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.001776 seconds
+Episode 2:
+Waste: 999428
+Filled Ratio: 0.00
+Execution time: 0.012486 seconds
+Episode 2:
+Waste: 998856
+Filled Ratio: 0.00
+Execution time: 0.013885 seconds
+Episode 2:
+Waste: 998284
+Filled Ratio: 0.00
+Execution time: 0.016362 seconds
+Episode 2:
+Waste: 997712
+Filled Ratio: 0.00
+Execution time: 0.031677 seconds
+Episode 2:
+Waste: 997140
+Filled Ratio: 0.00
+Execution time: 0.036626 seconds
+Episode 2:
+Waste: 996568
+Filled Ratio: 0.00
+Execution time: 0.037291 seconds
+Episode 2:
+Waste: 995996
+Filled Ratio: 0.00
+Execution time: 0.045078 seconds
+Episode 2:
+Waste: 995996
+Filled Ratio: 0.00
+Execution time: 0.054254 seconds
+Episode 2:
+Waste: 995879
+Filled Ratio: 0.00
+Execution time: 0.059168 seconds
+Episode 2:
+Waste: 995762
+Filled Ratio: 0.00
+Execution time: 0.057846 seconds
+Episode 2:
+Waste: 995645
+Filled Ratio: 0.00
+Execution time: 0.055142 seconds
+Episode 2:
+Waste: 995528
+Filled Ratio: 0.00
+Execution time: 0.077758 seconds
+Episode 2:
+Waste: 995411
+Filled Ratio: 0.00
+Execution time: 0.078260 seconds
+Episode 2:
+Waste: 995294
+Filled Ratio: 0.00
+Execution time: 0.074391 seconds
+Episode 2:
+Waste: 995177
+Filled Ratio: 0.00
+Execution time: 0.085337 seconds
+Episode 3:
+Waste: 999100
+Filled Ratio: 0.00
+Execution time: 0.000228 seconds
+Episode 3:
+Waste: 998200
+Filled Ratio: 0.00
+Execution time: 0.000360 seconds
+Episode 3:
+Waste: 997300
+Filled Ratio: 0.00
+Execution time: 0.000538 seconds
+Episode 3:
+Waste: 996400
+Filled Ratio: 0.00
+Execution time: 0.001294 seconds
+Episode 3:
+Waste: 995500
+Filled Ratio: 0.00
+Execution time: 0.001857 seconds
+Episode 3:
+Waste: 994600
+Filled Ratio: 0.01
+Execution time: 0.032140 seconds
+Episode 3:
+Waste: 994600
+Filled Ratio: 0.01
+Execution time: 0.028943 seconds
+Episode 3:
+Waste: 993588
+Filled Ratio: 0.01
+Execution time: 0.031168 seconds
+Episode 3:
+Waste: 992576
+Filled Ratio: 0.01
+Execution time: 0.043491 seconds
+Episode 3:
+Waste: 991564
+Filled Ratio: 0.01
+Execution time: 0.054254 seconds
+Episode 3:
+Waste: 990552
+Filled Ratio: 0.01
+Execution time: 0.059521 seconds
+Episode 3:
+Waste: 989540
+Filled Ratio: 0.01
+Execution time: 0.058603 seconds
+Episode 3:
+Waste: 988528
+Filled Ratio: 0.01
+Execution time: 0.068280 seconds
+Episode 3:
+Waste: 988528
+Filled Ratio: 0.01
+Execution time: 0.060041 seconds
+Episode 3:
+Waste: 986728
+Filled Ratio: 0.01
+Execution time: 0.058242 seconds
+Episode 3:
+Waste: 984928
+Filled Ratio: 0.02
+Execution time: 0.069005 seconds
+Episode 3:
+Waste: 983128
+Filled Ratio: 0.02
+Execution time: 0.069463 seconds
+Episode 3:
+Waste: 981328
+Filled Ratio: 0.02
+Execution time: 0.086261 seconds
+Episode 3:
+Waste: 979528
+Filled Ratio: 0.02
+Execution time: 0.083517 seconds
+Episode 3:
+Waste: 977728
+Filled Ratio: 0.02
+Execution time: 0.111250 seconds
+Episode 3:
+Waste: 975928
+Filled Ratio: 0.02
+Execution time: 0.105598 seconds
+Episode 3:
+Waste: 974128
+Filled Ratio: 0.03
+Execution time: 0.112473 seconds
+Episode 3:
+Waste: 974128
+Filled Ratio: 0.03
+Execution time: 0.117057 seconds
+Episode 3:
+Waste: 972940
+Filled Ratio: 0.03
+Execution time: 0.028870 seconds
+Episode 3:
+Waste: 971752
+Filled Ratio: 0.03
+Execution time: 0.036510 seconds
+Episode 3:
+Waste: 971752
+Filled Ratio: 0.03
+Execution time: 0.071971 seconds
+Episode 3:
+Waste: 970634
+Filled Ratio: 0.03
+Execution time: 0.058682 seconds
+Episode 3:
+Waste: 969516
+Filled Ratio: 0.03
+Execution time: 0.070321 seconds
+Episode 3:
+Waste: 969516
+Filled Ratio: 0.03
+Execution time: 0.103556 seconds
+Episode 3:
+Waste: 968928
+Filled Ratio: 0.03
+Execution time: 0.106245 seconds
+Episode 3:
+Waste: 968340
+Filled Ratio: 0.03
+Execution time: 0.092489 seconds
+Episode 3:
+Waste: 967752
+Filled Ratio: 0.03
+Execution time: 0.108086 seconds
+Episode 3:
+Waste: 967164
+Filled Ratio: 0.03
+Execution time: 0.107579 seconds
+Episode 3:
+Waste: 965934
+Filled Ratio: 0.03
+Execution time: 0.097376 seconds
+Episode 3:
+Waste: 965934
+Filled Ratio: 0.03
+Execution time: 0.156038 seconds
+Episode 3:
+Waste: 965294
+Filled Ratio: 0.03
+Execution time: 0.124305 seconds
+Episode 3:
+Waste: 965294
+Filled Ratio: 0.03
+Execution time: 0.136031 seconds
+Episode 3:
+Waste: 964774
+Filled Ratio: 0.04
+Execution time: 0.124934 seconds
+Episode 3:
+Waste: 964254
+Filled Ratio: 0.04
+Execution time: 0.127846 seconds
+Episode 3:
+Waste: 963734
+Filled Ratio: 0.04
+Execution time: 0.142094 seconds
+Episode 3:
+Waste: 963214
+Filled Ratio: 0.04
+Execution time: 0.169806 seconds
+Episode 3:
+Waste: 962694
+Filled Ratio: 0.04
+Execution time: 0.185531 seconds
+Episode 3:
+Waste: 962174
+Filled Ratio: 0.04
+Execution time: 0.175783 seconds
+Episode 3:
+Waste: 961654
+Filled Ratio: 0.04
+Execution time: 0.183530 seconds
+Episode 3:
+Waste: 961134
+Filled Ratio: 0.04
+Execution time: 0.180492 seconds
+Episode 3:
+Waste: 960614
+Filled Ratio: 0.04
+Execution time: 0.183186 seconds
+Episode 3:
+Waste: 960094
+Filled Ratio: 0.04
+Execution time: 0.194342 seconds
+Episode 3:
+Waste: 959122
+Filled Ratio: 0.04
+Execution time: 0.189394 seconds
+Episode 3:
+Waste: 958150
+Filled Ratio: 0.04
+Execution time: 0.185501 seconds
+Episode 3:
+Waste: 957178
+Filled Ratio: 0.04
+Execution time: 0.189003 seconds
+Episode 3:
+Waste: 956206
+Filled Ratio: 0.04
+Execution time: 0.206019 seconds
+Episode 3:
+Waste: 955234
+Filled Ratio: 0.04
+Execution time: 0.196761 seconds
+Episode 3:
+Waste: 954574
+Filled Ratio: 0.05
+Execution time: 0.244349 seconds
+Episode 3:
+Waste: 953914
+Filled Ratio: 0.05
+Execution time: 0.241101 seconds
+Episode 3:
+Waste: 953254
+Filled Ratio: 0.05
+Execution time: 0.247929 seconds
+Episode 3:
+Waste: 952594
+Filled Ratio: 0.05
+Execution time: 0.243701 seconds
+Episode 3:
+Waste: 951934
+Filled Ratio: 0.05
+Execution time: 0.268695 seconds
+Episode 3:
+Waste: 951670
+Filled Ratio: 0.05
+Execution time: 0.096908 seconds
+Episode 3:
+Waste: 951406
+Filled Ratio: 0.05
+Execution time: 0.096881 seconds
+Episode 3:
+Waste: 951142
+Filled Ratio: 0.05
+Execution time: 0.202669 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.197304 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.209681 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.256023 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.260405 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.267664 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.274734 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.288523 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.293105 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.297382 seconds
+Episode 3:
+Waste: 950878
+Filled Ratio: 0.05
+Execution time: 0.305353 seconds
+Episode 3:
+Waste: 950710
+Filled Ratio: 0.05
+Execution time: 0.050095 seconds
+Episode 3:
+Waste: 950542
+Filled Ratio: 0.05
+Execution time: 0.048709 seconds
+Episode 3:
+Waste: 950374
+Filled Ratio: 0.05
+Execution time: 0.050666 seconds
+Episode 3:
+Waste: 950206
+Filled Ratio: 0.05
+Execution time: 0.072841 seconds
+Episode 3:
+Waste: 950038
+Filled Ratio: 0.05
+Execution time: 0.069656 seconds
+Episode 3:
+Waste: 949870
+Filled Ratio: 0.05
+Execution time: 0.089064 seconds
+Episode 3:
+Waste: 949506
+Filled Ratio: 0.05
+Execution time: 0.103011 seconds
+Episode 3:
+Waste: 949506
+Filled Ratio: 0.05
+Execution time: 0.137446 seconds
+Episode 3:
+Waste: 949253
+Filled Ratio: 0.05
+Execution time: 0.328096 seconds
+Episode 3:
+Waste: 949046
+Filled Ratio: 0.05
+Execution time: 0.239228 seconds
+Episode 3:
+Waste: 948839
+Filled Ratio: 0.05
+Execution time: 0.289920 seconds
+Episode 3:
+Waste: 948632
+Filled Ratio: 0.05
+Execution time: 0.320789 seconds
+Episode 3:
+Waste: 948425
+Filled Ratio: 0.05
+Execution time: 0.312937 seconds
+Episode 3:
+Waste: 948393
+Filled Ratio: 0.05
+Execution time: 0.072526 seconds
+Episode 3:
+Waste: 948361
+Filled Ratio: 0.05
+Execution time: 0.063930 seconds
+Episode 3:
+Waste: 948329
+Filled Ratio: 0.05
+Execution time: 0.062373 seconds
+Episode 3:
+Waste: 948297
+Filled Ratio: 0.05
+Execution time: 0.071335 seconds
+Episode 3:
+Waste: 948265
+Filled Ratio: 0.05
+Execution time: 0.066947 seconds
+Episode 3:
+Waste: 948265
+Filled Ratio: 0.05
+Execution time: 0.062686 seconds
+Episode 3:
+Waste: 948083
+Filled Ratio: 0.05
+Execution time: 0.099528 seconds
+Episode 3:
+Waste: 947901
+Filled Ratio: 0.05
+Execution time: 0.092280 seconds
+Episode 3:
+Waste: 947719
+Filled Ratio: 0.05
+Execution time: 0.095553 seconds
+Episode 3:
+Waste: 947537
+Filled Ratio: 0.05
+Execution time: 0.136045 seconds
+Episode 3:
+Waste: 947355
+Filled Ratio: 0.05
+Execution time: 0.166435 seconds
+Episode 3:
+Waste: 947173
+Filled Ratio: 0.05
+Execution time: 0.221358 seconds
+Episode 3:
+Waste: 947173
+Filled Ratio: 0.05
+Execution time: 0.283884 seconds
+Episode 3:
+Waste: 947056
+Filled Ratio: 0.05
+Execution time: 0.111655 seconds
+Episode 3:
+Waste: 946939
+Filled Ratio: 0.05
+Execution time: 0.196691 seconds
+Episode 3:
+Waste: 946819
+Filled Ratio: 0.05
+Execution time: 0.096995 seconds
+Episode 3:
+Waste: 946699
+Filled Ratio: 0.05
+Execution time: 0.106402 seconds
+Episode 3:
+Waste: 946579
+Filled Ratio: 0.05
+Execution time: 0.203522 seconds
+Episode 3:
+Waste: 946459
+Filled Ratio: 0.05
+Execution time: 0.203928 seconds
+Episode 3:
+Waste: 946339
+Filled Ratio: 0.05
+Execution time: 0.197992 seconds
+Episode 3:
+Waste: 946219
+Filled Ratio: 0.05
+Execution time: 0.335003 seconds
+Episode 3:
+Waste: 946099
+Filled Ratio: 0.05
+Execution time: 0.335780 seconds
+Episode 3:
+Waste: 945979
+Filled Ratio: 0.05
+Execution time: 0.333969 seconds
+Episode 3:
+Waste: 945859
+Filled Ratio: 0.05
+Execution time: 0.343196 seconds
+Episode 3:
+Waste: 945844
+Filled Ratio: 0.05
+Execution time: 0.001127 seconds
+Episode 3:
+Waste: 945829
+Filled Ratio: 0.05
+Execution time: 0.006360 seconds
+Episode 3:
+Waste: 945829
+Filled Ratio: 0.05
+Execution time: 0.013392 seconds
+Episode 4:
+Waste: 998334
+Filled Ratio: 0.00
+Execution time: 0.000190 seconds
+Episode 4:
+Waste: 996668
+Filled Ratio: 0.00
+Execution time: 0.010448 seconds
+Episode 4:
+Waste: 995002
+Filled Ratio: 0.00
+Execution time: 0.011649 seconds
+Episode 4:
+Waste: 993336
+Filled Ratio: 0.01
+Execution time: 0.014949 seconds
+Episode 4:
+Waste: 991670
+Filled Ratio: 0.01
+Execution time: 0.028860 seconds
+Episode 4:
+Waste: 991670
+Filled Ratio: 0.01
+Execution time: 0.001036 seconds
+Episode 4:
+Waste: 991670
+Filled Ratio: 0.01
+Execution time: 0.019009 seconds
+Episode 4:
+Waste: 989990
+Filled Ratio: 0.01
+Execution time: 0.041948 seconds
+Episode 4:
+Waste: 989350
+Filled Ratio: 0.01
+Execution time: 0.060115 seconds
+Episode 4:
+Waste: 988710
+Filled Ratio: 0.01
+Execution time: 0.076080 seconds
+Episode 4:
+Waste: 988710
+Filled Ratio: 0.01
+Execution time: 0.056816 seconds
+Episode 4:
+Waste: 988350
+Filled Ratio: 0.01
+Execution time: 0.019088 seconds
+Episode 4:
+Waste: 987990
+Filled Ratio: 0.01
+Execution time: 0.030718 seconds
+Episode 4:
+Waste: 987630
+Filled Ratio: 0.01
+Execution time: 0.033800 seconds
+Episode 4:
+Waste: 987270
+Filled Ratio: 0.01
+Execution time: 0.069704 seconds
+Episode 4:
+Waste: 986910
+Filled Ratio: 0.01
+Execution time: 0.061016 seconds
+Episode 4:
+Waste: 986550
+Filled Ratio: 0.01
+Execution time: 0.071637 seconds
+Episode 4:
+Waste: 986190
+Filled Ratio: 0.01
+Execution time: 0.072241 seconds
+Episode 4:
+Waste: 985635
+Filled Ratio: 0.01
+Execution time: 0.063831 seconds
+Episode 4:
+Waste: 985080
+Filled Ratio: 0.01
+Execution time: 0.075998 seconds
+Episode 4:
+Waste: 984525
+Filled Ratio: 0.02
+Execution time: 0.088729 seconds
+Episode 4:
+Waste: 983970
+Filled Ratio: 0.02
+Execution time: 0.092899 seconds
+Episode 4:
+Waste: 982926
+Filled Ratio: 0.02
+Execution time: 0.077473 seconds
+Episode 4:
+Waste: 981882
+Filled Ratio: 0.02
+Execution time: 0.078526 seconds
+Episode 4:
+Waste: 981882
+Filled Ratio: 0.02
+Execution time: 0.094272 seconds
+Episode 4:
+Waste: 981882
+Filled Ratio: 0.02
+Execution time: 0.093203 seconds
+Episode 4:
+Waste: 981157
+Filled Ratio: 0.02
+Execution time: 0.108241 seconds
+Episode 4:
+Waste: 980432
+Filled Ratio: 0.02
+Execution time: 0.122978 seconds
+Episode 4:
+Waste: 979707
+Filled Ratio: 0.02
+Execution time: 0.109456 seconds
+Episode 4:
+Waste: 978982
+Filled Ratio: 0.02
+Execution time: 0.110349 seconds
+Episode 4:
+Waste: 978257
+Filled Ratio: 0.02
+Execution time: 0.122667 seconds
+Episode 4:
+Waste: 977532
+Filled Ratio: 0.02
+Execution time: 0.125889 seconds
+Episode 4:
+Waste: 976807
+Filled Ratio: 0.02
+Execution time: 0.141287 seconds
+Episode 4:
+Waste: 976807
+Filled Ratio: 0.02
+Execution time: 0.119817 seconds
+Episode 4:
+Waste: 976105
+Filled Ratio: 0.02
+Execution time: 0.126055 seconds
+Episode 4:
+Waste: 975403
+Filled Ratio: 0.02
+Execution time: 0.148730 seconds
+Episode 4:
+Waste: 974701
+Filled Ratio: 0.03
+Execution time: 0.145075 seconds
+Episode 4:
+Waste: 973999
+Filled Ratio: 0.03
+Execution time: 0.157244 seconds
+Episode 4:
+Waste: 973999
+Filled Ratio: 0.03
+Execution time: 0.192758 seconds
+Episode 4:
+Waste: 973873
+Filled Ratio: 0.03
+Execution time: 0.031005 seconds
+Episode 4:
+Waste: 973747
+Filled Ratio: 0.03
+Execution time: 0.030777 seconds
+Episode 4:
+Waste: 973621
+Filled Ratio: 0.03
+Execution time: 0.092166 seconds
+Episode 4:
+Waste: 973495
+Filled Ratio: 0.03
+Execution time: 0.087853 seconds
+Episode 4:
+Waste: 973287
+Filled Ratio: 0.03
+Execution time: 0.111900 seconds
+Episode 4:
+Waste: 973079
+Filled Ratio: 0.03
+Execution time: 0.146343 seconds
+Episode 4:
+Waste: 972871
+Filled Ratio: 0.03
+Execution time: 0.131482 seconds
+Episode 4:
+Waste: 972663
+Filled Ratio: 0.03
+Execution time: 0.155259 seconds
+Episode 4:
+Waste: 972455
+Filled Ratio: 0.03
+Execution time: 0.155049 seconds
+Episode 4:
+Waste: 972247
+Filled Ratio: 0.03
+Execution time: 0.151427 seconds
+Episode 4:
+Waste: 972039
+Filled Ratio: 0.03
+Execution time: 0.164935 seconds
+Episode 4:
+Waste: 972039
+Filled Ratio: 0.03
+Execution time: 0.152882 seconds
+Episode 4:
+Waste: 971847
+Filled Ratio: 0.03
+Execution time: 0.162519 seconds
+Episode 4:
+Waste: 971655
+Filled Ratio: 0.03
+Execution time: 0.162069 seconds
+Episode 4:
+Waste: 971463
+Filled Ratio: 0.03
+Execution time: 0.164130 seconds
+Episode 4:
+Waste: 971271
+Filled Ratio: 0.03
+Execution time: 0.162903 seconds
+Episode 4:
+Waste: 971079
+Filled Ratio: 0.03
+Execution time: 0.192269 seconds
+Episode 4:
+Waste: 970887
+Filled Ratio: 0.03
+Execution time: 0.222688 seconds
+Episode 4:
+Waste: 970695
+Filled Ratio: 0.03
+Execution time: 0.215095 seconds
+Episode 4:
+Waste: 970503
+Filled Ratio: 0.03
+Execution time: 0.221287 seconds
+Episode 4:
+Waste: 970311
+Filled Ratio: 0.03
+Execution time: 0.218828 seconds
+Episode 4:
+Waste: 970171
+Filled Ratio: 0.03
+Execution time: 0.149945 seconds
+Episode 4:
+Waste: 970031
+Filled Ratio: 0.03
+Execution time: 0.146296 seconds
+Episode 4:
+Waste: 969891
+Filled Ratio: 0.03
+Execution time: 0.195697 seconds
+Episode 4:
+Waste: 969891
+Filled Ratio: 0.03
+Execution time: 0.242338 seconds
+Episode 4:
+Waste: 969800
+Filled Ratio: 0.03
+Execution time: 0.033350 seconds
+Episode 4:
+Waste: 969709
+Filled Ratio: 0.03
+Execution time: 0.132709 seconds
+Episode 4:
+Waste: 969618
+Filled Ratio: 0.03
+Execution time: 0.128185 seconds
+Episode 4:
+Waste: 969618
+Filled Ratio: 0.03
+Execution time: 0.122739 seconds
+Episode 5:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.000185 seconds
+Episode 5:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.000741 seconds
+Episode 5:
+Waste: 1000000
+Filled Ratio: 0.00
+Execution time: 0.009444 seconds
+Episode 5:
+Waste: 998496
+Filled Ratio: 0.00
+Execution time: 0.015474 seconds
+Episode 5:
+Waste: 996992
+Filled Ratio: 0.00
+Execution time: 0.012587 seconds
+Episode 5:
+Waste: 995488
+Filled Ratio: 0.00
+Execution time: 0.017727 seconds
+Episode 5:
+Waste: 993984
+Filled Ratio: 0.01
+Execution time: 0.016425 seconds
+Episode 5:
+Waste: 992480
+Filled Ratio: 0.01
+Execution time: 0.022157 seconds
+Episode 5:
+Waste: 992480
+Filled Ratio: 0.01
+Execution time: 0.028937 seconds
+Episode 5:
+Waste: 990896
+Filled Ratio: 0.01
+Execution time: 0.024605 seconds
+Episode 5:
+Waste: 989312
+Filled Ratio: 0.01
+Execution time: 0.031728 seconds
+Episode 5:
+Waste: 987728
+Filled Ratio: 0.01
+Execution time: 0.056793 seconds
+Episode 5:
+Waste: 986144
+Filled Ratio: 0.01
+Execution time: 0.055377 seconds
+Episode 5:
+Waste: 984560
+Filled Ratio: 0.02
+Execution time: 0.051164 seconds
+Episode 5:
+Waste: 982976
+Filled Ratio: 0.02
+Execution time: 0.075085 seconds
+Episode 5:
+Waste: 981392
+Filled Ratio: 0.02
+Execution time: 0.064984 seconds
+Episode 5:
+Waste: 979808
+Filled Ratio: 0.02
+Execution time: 0.083457 seconds
+Episode 5:
+Waste: 978224
+Filled Ratio: 0.02
+Execution time: 0.076000 seconds
+Episode 5:
+Waste: 978224
+Filled Ratio: 0.02
+Execution time: 0.085429 seconds
+Episode 5:
+Waste: 977090
+Filled Ratio: 0.02
+Execution time: 0.042961 seconds
+Episode 5:
+Waste: 975956
+Filled Ratio: 0.02
+Execution time: 0.068202 seconds
+Episode 5:
+Waste: 974822
+Filled Ratio: 0.03
+Execution time: 0.102601 seconds
+Episode 5:
+Waste: 973688
+Filled Ratio: 0.03
+Execution time: 0.097680 seconds
+Episode 5:
+Waste: 972554
+Filled Ratio: 0.03
+Execution time: 0.104595 seconds
+Episode 5:
+Waste: 972554
+Filled Ratio: 0.03
+Execution time: 0.111467 seconds
+Episode 5:
+Waste: 972554
+Filled Ratio: 0.03
+Execution time: 0.114130 seconds
+Episode 5:
+Waste: 971718
+Filled Ratio: 0.03
+Execution time: 0.068488 seconds
+Episode 5:
+Waste: 970882
+Filled Ratio: 0.03
+Execution time: 0.141297 seconds
+Episode 5:
+Waste: 970046
+Filled Ratio: 0.03
+Execution time: 0.136029 seconds
+Episode 5:
+Waste: 969210
+Filled Ratio: 0.03
+Execution time: 0.148578 seconds
+Episode 5:
+Waste: 968374
+Filled Ratio: 0.03
+Execution time: 0.152128 seconds
+Episode 5:
+Waste: 967538
+Filled Ratio: 0.03
+Execution time: 0.155380 seconds
+Episode 5:
+Waste: 966702
+Filled Ratio: 0.03
+Execution time: 0.171324 seconds
+Episode 5:
+Waste: 965866
+Filled Ratio: 0.03
+Execution time: 0.170164 seconds
+Episode 5:
+Waste: 965866
+Filled Ratio: 0.03
+Execution time: 0.197652 seconds
+Episode 5:
+Waste: 965448
+Filled Ratio: 0.03
+Execution time: 0.022824 seconds
+Episode 5:
+Waste: 965030
+Filled Ratio: 0.03
+Execution time: 0.023797 seconds
+Episode 5:
+Waste: 964612
+Filled Ratio: 0.04
+Execution time: 0.096825 seconds
+Episode 5:
+Waste: 964194
+Filled Ratio: 0.04
+Execution time: 0.148178 seconds
+Episode 5:
+Waste: 963776
+Filled Ratio: 0.04
+Execution time: 0.166337 seconds
+Episode 5:
+Waste: 963358
+Filled Ratio: 0.04
+Execution time: 0.179341 seconds
+Episode 5:
+Waste: 962940
+Filled Ratio: 0.04
+Execution time: 0.189903 seconds
+Episode 5:
+Waste: 962522
+Filled Ratio: 0.04
+Execution time: 0.221286 seconds
+Episode 5:
+Waste: 962104
+Filled Ratio: 0.04
+Execution time: 0.203392 seconds
+Episode 5:
+Waste: 961686
+Filled Ratio: 0.04
+Execution time: 0.212949 seconds
+Episode 5:
+Waste: 961686
+Filled Ratio: 0.04
+Execution time: 0.001024 seconds
+Episode 5:
+Waste: 960858
+Filled Ratio: 0.04
+Execution time: 0.174062 seconds
+Episode 5:
+Waste: 960030
+Filled Ratio: 0.04
+Execution time: 0.183454 seconds
+Episode 5:
+Waste: 959202
+Filled Ratio: 0.04
+Execution time: 0.163532 seconds
+Episode 5:
+Waste: 958374
+Filled Ratio: 0.04
+Execution time: 0.180517 seconds
+Episode 5:
+Waste: 957546
+Filled Ratio: 0.04
+Execution time: 0.199355 seconds
+Episode 5:
+Waste: 957546
+Filled Ratio: 0.04
+Execution time: 0.223454 seconds
+Episode 5:
+Waste: 956636
+Filled Ratio: 0.04
+Execution time: 0.230774 seconds
+Episode 5:
+Waste: 955726
+Filled Ratio: 0.04
+Execution time: 0.225293 seconds
+Episode 5:
+Waste: 954816
+Filled Ratio: 0.05
+Execution time: 0.269926 seconds
+Episode 5:
+Waste: 953906
+Filled Ratio: 0.05
+Execution time: 0.209795 seconds
+Episode 5:
+Waste: 952996
+Filled Ratio: 0.05
+Execution time: 0.208049 seconds
+Episode 5:
+Waste: 952996
+Filled Ratio: 0.05
+Execution time: 0.225260 seconds
+Episode 5:
+Waste: 952619
+Filled Ratio: 0.05
+Execution time: 0.084331 seconds
+Episode 5:
+Waste: 952242
+Filled Ratio: 0.05
+Execution time: 0.137925 seconds
+Episode 5:
+Waste: 951865
+Filled Ratio: 0.05
+Execution time: 0.234646 seconds
+Episode 5:
+Waste: 951488
+Filled Ratio: 0.05
+Execution time: 0.290831 seconds
+Episode 5:
+Waste: 951111
+Filled Ratio: 0.05
+Execution time: 0.295674 seconds
+Episode 5:
+Waste: 950734
+Filled Ratio: 0.05
+Execution time: 0.308293 seconds
+Episode 5:
+Waste: 950357
+Filled Ratio: 0.05
+Execution time: 0.292525 seconds
+Episode 5:
+Waste: 949980
+Filled Ratio: 0.05
+Execution time: 0.274989 seconds
+Episode 5:
+Waste: 949980
+Filled Ratio: 0.05
+Execution time: 0.331163 seconds
+Episode 5:
+Waste: 949476
+Filled Ratio: 0.05
+Execution time: 0.355069 seconds
+Episode 5:
+Waste: 948972
+Filled Ratio: 0.05
+Execution time: 0.307531 seconds
+Episode 5:
+Waste: 948468
+Filled Ratio: 0.05
+Execution time: 0.265949 seconds
+Episode 5:
+Waste: 947964
+Filled Ratio: 0.05
+Execution time: 0.300468 seconds
+Episode 5:
+Waste: 947460
+Filled Ratio: 0.05
+Execution time: 0.252673 seconds
+Episode 5:
+Waste: 946956
+Filled Ratio: 0.05
+Execution time: 0.320141 seconds
+Episode 5:
+Waste: 946452
+Filled Ratio: 0.05
+Execution time: 0.304690 seconds
+Episode 5:
+Waste: 945948
+Filled Ratio: 0.05
+Execution time: 0.317792 seconds
+Episode 5:
+Waste: 945480
+Filled Ratio: 0.05
+Execution time: 0.312540 seconds
+Episode 5:
+Waste: 945012
+Filled Ratio: 0.05
+Execution time: 0.325893 seconds
+Episode 5:
+Waste: 944544
+Filled Ratio: 0.06
+Execution time: 0.328414 seconds
+Episode 5:
+Waste: 944076
+Filled Ratio: 0.06
+Execution time: 0.319692 seconds
+Episode 5:
+Waste: 943608
+Filled Ratio: 0.06
+Execution time: 0.332796 seconds
+Episode 5:
+Waste: 943140
+Filled Ratio: 0.06
+Execution time: 0.328179 seconds
+Episode 5:
+Waste: 943114
+Filled Ratio: 0.06
+Execution time: 0.037513 seconds
+Episode 5:
+Waste: 943114
+Filled Ratio: 0.06
+Execution time: 0.036724 seconds
+Episode 5:
+Waste: 942776
+Filled Ratio: 0.06
+Execution time: 0.041652 seconds
+Episode 5:
+Waste: 942438
+Filled Ratio: 0.06
+Execution time: 0.052002 seconds
+Episode 5:
+Waste: 942100
+Filled Ratio: 0.06
+Execution time: 0.188076 seconds
+Episode 5:
+Waste: 941762
+Filled Ratio: 0.06
+Execution time: 0.321859 seconds
+Episode 5:
+Waste: 941424
+Filled Ratio: 0.06
+Execution time: 0.360938 seconds
+Episode 5:
+Waste: 941086
+Filled Ratio: 0.06
+Execution time: 0.375776 seconds
+Episode 5:
+Waste: 940748
+Filled Ratio: 0.06
+Execution time: 0.395869 seconds
+Episode 5:
+Waste: 940410
+Filled Ratio: 0.06
+Execution time: 0.381078 seconds
+Episode 5:
+Waste: 940410
+Filled Ratio: 0.06
+Execution time: 0.403040 seconds
+Episode 5:
+Waste: 939906
+Filled Ratio: 0.06
+Execution time: 0.306849 seconds
+Episode 5:
+Waste: 939402
+Filled Ratio: 0.06
+Execution time: 0.359192 seconds
+Episode 5:
+Waste: 939402
+Filled Ratio: 0.06
+Execution time: 0.353224 seconds
+Episode 5:
+Waste: 939336
+Filled Ratio: 0.06
+Execution time: 0.071643 seconds
+Episode 5:
+Waste: 939270
+Filled Ratio: 0.06
+Execution time: 0.063975 seconds
+Episode 5:
+Waste: 939204
+Filled Ratio: 0.06
+Execution time: 0.086843 seconds
+Episode 5:
+Waste: 939138
+Filled Ratio: 0.06
+Execution time: 0.079160 seconds
+Episode 5:
+Waste: 939072
+Filled Ratio: 0.06
+Execution time: 0.129940 seconds
+Episode 5:
+Waste: 939006
+Filled Ratio: 0.06
+Execution time: 0.106276 seconds
+Episode 5:
+Waste: 939006
+Filled Ratio: 0.06
+Execution time: 0.133467 seconds
+Episode 5:
+Waste: 938626
+Filled Ratio: 0.06
+Execution time: 0.372144 seconds
+Episode 5:
+Waste: 938246
+Filled Ratio: 0.06
+Execution time: 0.437473 seconds
+Episode 5:
+Waste: 937866
+Filled Ratio: 0.06
+Execution time: 0.393217 seconds
+Episode 5:
+Waste: 937486
+Filled Ratio: 0.06
+Execution time: 0.377021 seconds
+Episode 5:
+Waste: 937106
+Filled Ratio: 0.06
+Execution time: 0.380439 seconds
+Episode 5:
+Waste: 936726
+Filled Ratio: 0.06
+Execution time: 0.401479 seconds
+Episode 5:
+Waste: 936346
+Filled Ratio: 0.06
+Execution time: 0.422066 seconds
+Episode 5:
+Waste: 935966
+Filled Ratio: 0.06
+Execution time: 0.401118 seconds
+Episode 5:
+Waste: 935586
+Filled Ratio: 0.06
+Execution time: 0.401090 seconds
+Episode 5:
+Waste: 935467
+Filled Ratio: 0.06
+Execution time: 0.001803 seconds
+Episode 5:
+Waste: 935348
+Filled Ratio: 0.06
+Execution time: 0.023938 seconds
+Episode 5:
+Waste: 935229
+Filled Ratio: 0.06
+Execution time: 0.027821 seconds
+Episode 5:
+Waste: 935110
+Filled Ratio: 0.06
+Execution time: 0.041356 seconds
+Episode 5:
+Waste: 934991
+Filled Ratio: 0.07
+Execution time: 0.060793 seconds
+Episode 5:
+Waste: 934872
+Filled Ratio: 0.07
+Execution time: 0.070859 seconds
+Episode 5:
+Waste: 934753
+Filled Ratio: 0.07
+Execution time: 0.185370 seconds
+Episode 5:
+Waste: 934634
+Filled Ratio: 0.07
+Execution time: 0.228113 seconds
+Episode 5:
+Waste: 934515
+Filled Ratio: 0.07
+Execution time: 0.235665 seconds
+Episode 5:
+Waste: 934515
+Filled Ratio: 0.07
+Execution time: 0.239928 seconds
+Episode 5:
+Waste: 934323
+Filled Ratio: 0.07
+Execution time: 0.237549 seconds
+Episode 5:
+Waste: 934288
+Filled Ratio: 0.07
+Execution time: 0.000948 seconds
+Episode 5:
+Waste: 934253
+Filled Ratio: 0.07
+Execution time: 0.007492 seconds
+Episode 5:
+Waste: 934218
+Filled Ratio: 0.07
+Execution time: 0.014848 seconds
+Episode 5:
+Waste: 934183
+Filled Ratio: 0.07
+Execution time: 0.022192 seconds
+Episode 5:
+Waste: 934148
+Filled Ratio: 0.07
+Execution time: 0.031882 seconds
+Episode 5:
+Waste: 934113
+Filled Ratio: 0.07
+Execution time: 0.028931 seconds
+Episode 5:
+Waste: 934078
+Filled Ratio: 0.07
+Execution time: 0.035356 seconds
+Episode 5:
+Waste: 934043
+Filled Ratio: 0.07
+Execution time: 0.048297 seconds
+Episode 5:
+Waste: 934008
+Filled Ratio: 0.07
+Execution time: 0.040584 seconds
+Episode 6:
+Waste: 999260
+Filled Ratio: 0.00
+Execution time: 0.000194 seconds
+Episode 6:
+Waste: 998520
+Filled Ratio: 0.00
+Execution time: 0.010351 seconds
+Episode 6:
+Waste: 997780
+Filled Ratio: 0.00
+Execution time: 0.015905 seconds
+Episode 6:
+Waste: 997780
+Filled Ratio: 0.00
+Execution time: 0.022535 seconds
+Episode 6:
+Waste: 997555
+Filled Ratio: 0.00
+Execution time: 0.000434 seconds
+Episode 6:
+Waste: 997330
+Filled Ratio: 0.00
+Execution time: 0.000946 seconds
+Episode 6:
+Waste: 997105
+Filled Ratio: 0.00
+Execution time: 0.001552 seconds
+Episode 6:
+Waste: 996880
+Filled Ratio: 0.00
+Execution time: 0.018385 seconds
+Episode 6:
+Waste: 996655
+Filled Ratio: 0.00
+Execution time: 0.019760 seconds
+Episode 6:
+Waste: 996430
+Filled Ratio: 0.00
+Execution time: 0.018758 seconds
+Episode 6:
+Waste: 996205
+Filled Ratio: 0.00
+Execution time: 0.043618 seconds
+Episode 6:
+Waste: 995980
+Filled Ratio: 0.00
+Execution time: 0.041877 seconds
+Episode 6:
+Waste: 995980
+Filled Ratio: 0.00
+Execution time: 0.028151 seconds
+Episode 6:
+Waste: 995980
+Filled Ratio: 0.00
+Execution time: 0.031475 seconds
+Episode 6:
+Waste: 995760
+Filled Ratio: 0.00
+Execution time: 0.040672 seconds
+Episode 6:
+Waste: 995540
+Filled Ratio: 0.00
+Execution time: 0.041504 seconds
+Episode 6:
+Waste: 995320
+Filled Ratio: 0.00
+Execution time: 0.037030 seconds
+Episode 6:
+Waste: 995100
+Filled Ratio: 0.00
+Execution time: 0.043244 seconds
+Episode 6:
+Waste: 994880
+Filled Ratio: 0.01
+Execution time: 0.043525 seconds
+Episode 6:
+Waste: 994660
+Filled Ratio: 0.01
+Execution time: 0.034443 seconds
+Episode 6:
+Waste: 994660
+Filled Ratio: 0.01
+Execution time: 0.033686 seconds
+Episode 7:
+Waste: 999342
+Filled Ratio: 0.00
+Execution time: 0.000312 seconds
+Episode 7:
+Waste: 998684
+Filled Ratio: 0.00
+Execution time: 0.000409 seconds
+Episode 7:
+Waste: 997553
+Filled Ratio: 0.00
+Execution time: 0.000579 seconds
+Episode 7:
+Waste: 996422
+Filled Ratio: 0.00
+Execution time: 0.025442 seconds
+Episode 7:
+Waste: 996422
+Filled Ratio: 0.00
+Execution time: 0.027088 seconds
+Episode 7:
+Waste: 996422
+Filled Ratio: 0.00
+Execution time: 0.052559 seconds
+Episode 7:
+Waste: 996422
+Filled Ratio: 0.00
+Execution time: 0.034778 seconds
+Episode 7:
+Waste: 996422
+Filled Ratio: 0.00
+Execution time: 0.039350 seconds
+Episode 7:
+Waste: 996398
+Filled Ratio: 0.00
+Execution time: 0.027357 seconds
+Episode 7:
+Waste: 996374
+Filled Ratio: 0.00
+Execution time: 0.031897 seconds
+Episode 7:
+Waste: 996350
+Filled Ratio: 0.00
+Execution time: 0.027494 seconds
+Episode 7:
+Waste: 996326
+Filled Ratio: 0.00
+Execution time: 0.027320 seconds
+Episode 7:
+Waste: 996302
+Filled Ratio: 0.00
+Execution time: 0.028687 seconds
+Episode 7:
+Waste: 996278
+Filled Ratio: 0.00
+Execution time: 0.031936 seconds
+Episode 7:
+Waste: 996254
+Filled Ratio: 0.00
+Execution time: 0.033814 seconds
+Episode 7:
+Waste: 996254
+Filled Ratio: 0.00
+Execution time: 0.031714 seconds
+Episode 7:
+Waste: 996162
+Filled Ratio: 0.00
+Execution time: 0.039383 seconds
+Episode 8:
+Waste: 998400
+Filled Ratio: 0.00
+Execution time: 0.000233 seconds
+Episode 8:
+Waste: 996800
+Filled Ratio: 0.00
+Execution time: 0.016180 seconds
+Episode 8:
+Waste: 995200
+Filled Ratio: 0.00
+Execution time: 0.022038 seconds
+Episode 8:
+Waste: 993600
+Filled Ratio: 0.01
+Execution time: 0.028061 seconds
+Episode 8:
+Waste: 992000
+Filled Ratio: 0.01
+Execution time: 0.041307 seconds
+Episode 8:
+Waste: 990400
+Filled Ratio: 0.01
+Execution time: 0.036809 seconds
+Episode 8:
+Waste: 988800
+Filled Ratio: 0.01
+Execution time: 0.032645 seconds
+Episode 8:
+Waste: 987200
+Filled Ratio: 0.01
+Execution time: 0.053310 seconds
+Episode 8:
+Waste: 985600
+Filled Ratio: 0.01
+Execution time: 0.061906 seconds
+Episode 8:
+Waste: 985506
+Filled Ratio: 0.01
+Execution time: 0.027532 seconds
+Episode 8:
+Waste: 985412
+Filled Ratio: 0.01
+Execution time: 0.034904 seconds
+Episode 8:
+Waste: 985318
+Filled Ratio: 0.01
+Execution time: 0.046389 seconds
+Episode 8:
+Waste: 985224
+Filled Ratio: 0.01
+Execution time: 0.042251 seconds
+Episode 8:
+Waste: 985130
+Filled Ratio: 0.01
+Execution time: 0.036962 seconds
+Episode 8:
+Waste: 985036
+Filled Ratio: 0.01
+Execution time: 0.036366 seconds
+Episode 8:
+Waste: 984942
+Filled Ratio: 0.02
+Execution time: 0.043535 seconds
+Episode 8:
+Waste: 984848
+Filled Ratio: 0.02
+Execution time: 0.036345 seconds
+Episode 8:
+Waste: 984754
+Filled Ratio: 0.02
+Execution time: 0.036363 seconds
+Episode 8:
+Waste: 984034
+Filled Ratio: 0.02
+Execution time: 0.085590 seconds
+Episode 8:
+Waste: 983314
+Filled Ratio: 0.02
+Execution time: 0.097595 seconds
+Episode 8:
+Waste: 982594
+Filled Ratio: 0.02
+Execution time: 0.089132 seconds
+Episode 8:
+Waste: 981874
+Filled Ratio: 0.02
+Execution time: 0.097245 seconds
+Episode 8:
+Waste: 981154
+Filled Ratio: 0.02
+Execution time: 0.109459 seconds
+Episode 8:
+Waste: 980434
+Filled Ratio: 0.02
+Execution time: 0.100073 seconds
+Episode 8:
+Waste: 979258
+Filled Ratio: 0.02
+Execution time: 0.001483 seconds
+Episode 8:
+Waste: 978082
+Filled Ratio: 0.02
+Execution time: 0.085462 seconds
+Episode 8:
+Waste: 976906
+Filled Ratio: 0.02
+Execution time: 0.121459 seconds
+Episode 8:
+Waste: 975730
+Filled Ratio: 0.02
+Execution time: 0.108154 seconds
+Episode 8:
+Waste: 974554
+Filled Ratio: 0.03
+Execution time: 0.112818 seconds
+Episode 8:
+Waste: 973378
+Filled Ratio: 0.03
+Execution time: 0.146755 seconds
+Episode 8:
+Waste: 972202
+Filled Ratio: 0.03
+Execution time: 0.109762 seconds
+Episode 8:
+Waste: 972202
+Filled Ratio: 0.03
+Execution time: 0.120292 seconds
+Episode 8:
+Waste: 971320
+Filled Ratio: 0.03
+Execution time: 0.137715 seconds
+Episode 8:
+Waste: 970438
+Filled Ratio: 0.03
+Execution time: 0.157057 seconds
+Episode 8:
+Waste: 969556
+Filled Ratio: 0.03
+Execution time: 0.161444 seconds
+Episode 8:
+Waste: 968674
+Filled Ratio: 0.03
+Execution time: 0.155296 seconds
+Episode 8:
+Waste: 967792
+Filled Ratio: 0.03
+Execution time: 0.165684 seconds
+Episode 8:
+Waste: 966910
+Filled Ratio: 0.03
+Execution time: 0.206130 seconds
+Episode 8:
+Waste: 966910
+Filled Ratio: 0.03
+Execution time: 0.165154 seconds
+Episode 8:
+Waste: 966664
+Filled Ratio: 0.03
+Execution time: 0.023386 seconds
+Episode 8:
+Waste: 966418
+Filled Ratio: 0.03
+Execution time: 0.025950 seconds
+Episode 8:
+Waste: 966172
+Filled Ratio: 0.03
+Execution time: 0.034258 seconds
+Episode 8:
+Waste: 965926
+Filled Ratio: 0.03
+Execution time: 0.031733 seconds
+Episode 8:
+Waste: 965680
+Filled Ratio: 0.03
+Execution time: 0.044604 seconds
+Episode 8:
+Waste: 965434
+Filled Ratio: 0.03
+Execution time: 0.043823 seconds
+Episode 8:
+Waste: 965188
+Filled Ratio: 0.03
+Execution time: 0.074623 seconds
+Episode 8:
+Waste: 964348
+Filled Ratio: 0.04
+Execution time: 0.036394 seconds
+Episode 8:
+Waste: 963508
+Filled Ratio: 0.04
+Execution time: 0.077524 seconds
+Episode 8:
+Waste: 962668
+Filled Ratio: 0.04
+Execution time: 0.136558 seconds
+Episode 8:
+Waste: 961828
+Filled Ratio: 0.04
+Execution time: 0.168989 seconds
+Episode 8:
+Waste: 960988
+Filled Ratio: 0.04
+Execution time: 0.176297 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.219009 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.219546 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.127059 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.112329 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.137701 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.167375 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.178859 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.221521 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.231863 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.233278 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.226614 seconds
+Episode 8:
+Waste: 960148
+Filled Ratio: 0.04
+Execution time: 0.239124 seconds
+Episode 8:
+Waste: 959274
+Filled Ratio: 0.04
+Execution time: 0.187087 seconds
+Episode 8:
+Waste: 958400
+Filled Ratio: 0.04
+Execution time: 0.187559 seconds
+Episode 8:
+Waste: 957526
+Filled Ratio: 0.04
+Execution time: 0.191702 seconds
+Episode 8:
+Waste: 956652
+Filled Ratio: 0.04
+Execution time: 0.188620 seconds
+Episode 8:
+Waste: 955778
+Filled Ratio: 0.04
+Execution time: 0.223320 seconds
+Episode 8:
+Waste: 954904
+Filled Ratio: 0.05
+Execution time: 0.208346 seconds
+Episode 8:
+Waste: 954030
+Filled Ratio: 0.05
+Execution time: 0.203682 seconds
+Episode 8:
+Waste: 953156
+Filled Ratio: 0.05
+Execution time: 0.195395 seconds
+Episode 8:
+Waste: 953156
+Filled Ratio: 0.05
+Execution time: 0.222759 seconds
+Episode 8:
+Waste: 952714
+Filled Ratio: 0.05
+Execution time: 0.247458 seconds
+Episode 8:
+Waste: 952272
+Filled Ratio: 0.05
+Execution time: 0.249007 seconds
+Episode 8:
+Waste: 951830
+Filled Ratio: 0.05
+Execution time: 0.254098 seconds
+Episode 8:
+Waste: 951203
+Filled Ratio: 0.05
+Execution time: 0.221075 seconds
+Episode 8:
+Waste: 950576
+Filled Ratio: 0.05
+Execution time: 0.214721 seconds
+Episode 8:
+Waste: 949949
+Filled Ratio: 0.05
+Execution time: 0.231809 seconds
+Episode 8:
+Waste: 949322
+Filled Ratio: 0.05
+Execution time: 0.247926 seconds
+Episode 8:
+Waste: 948695
+Filled Ratio: 0.05
+Execution time: 0.279648 seconds
+Episode 8:
+Waste: 948068
+Filled Ratio: 0.05
+Execution time: 0.272399 seconds
+Episode 8:
+Waste: 948068
+Filled Ratio: 0.05
+Execution time: 0.290028 seconds
+Episode 8:
+Waste: 948041
+Filled Ratio: 0.05
+Execution time: 0.001913 seconds
+Episode 8:
+Waste: 948014
+Filled Ratio: 0.05
+Execution time: 0.001507 seconds
+Episode 8:
+Waste: 948014
+Filled Ratio: 0.05
+Execution time: 0.001031 seconds
+Episode 8:
+Waste: 947934
+Filled Ratio: 0.05
+Execution time: 0.001154 seconds
+Episode 8:
+Waste: 947854
+Filled Ratio: 0.05
+Execution time: 0.001727 seconds
+Episode 8:
+Waste: 947774
+Filled Ratio: 0.05
+Execution time: 0.017790 seconds
+Episode 8:
+Waste: 947694
+Filled Ratio: 0.05
+Execution time: 0.021079 seconds
+Episode 8:
+Waste: 947614
+Filled Ratio: 0.05
+Execution time: 0.048165 seconds
+Episode 8:
+Waste: 947534
+Filled Ratio: 0.05
+Execution time: 0.052676 seconds
+Episode 8:
+Waste: 947454
+Filled Ratio: 0.05
+Execution time: 0.053284 seconds
+Episode 8:
+Waste: 947352
+Filled Ratio: 0.05
+Execution time: 0.074741 seconds
+Episode 8:
+Waste: 947250
+Filled Ratio: 0.05
+Execution time: 0.049330 seconds
+Episode 8:
+Waste: 947148
+Filled Ratio: 0.05
+Execution time: 0.096887 seconds
+Episode 8:
+Waste: 947046
+Filled Ratio: 0.05
+Execution time: 0.064228 seconds
+Episode 8:
+Waste: 946944
+Filled Ratio: 0.05
+Execution time: 0.075043 seconds
+Episode 8:
+Waste: 946842
+Filled Ratio: 0.05
+Execution time: 0.092986 seconds
+Episode 8:
+Waste: 946740
+Filled Ratio: 0.05
+Execution time: 0.089707 seconds
+Episode 8:
+Waste: 946638
+Filled Ratio: 0.05
+Execution time: 0.137819 seconds
+Episode 8:
+Waste: 946638
+Filled Ratio: 0.05
+Execution time: 0.171080 seconds
+Episode 8:
+Waste: 946508
+Filled Ratio: 0.05
+Execution time: 0.154529 seconds
+Episode 8:
+Waste: 946378
+Filled Ratio: 0.05
+Execution time: 0.179892 seconds
+Episode 8:
+Waste: 946248
+Filled Ratio: 0.05
+Execution time: 0.172916 seconds
+Episode 8:
+Waste: 946248
+Filled Ratio: 0.05
+Execution time: 0.190318 seconds
+Episode 9:
+Waste: 999286
+Filled Ratio: 0.00
+Execution time: 0.000180 seconds
+Episode 9:
+Waste: 999286
+Filled Ratio: 0.00
+Execution time: 0.000437 seconds
+Episode 9:
+Waste: 999286
+Filled Ratio: 0.00
+Execution time: 0.000479 seconds
+Episode 9:
+Waste: 999286
+Filled Ratio: 0.00
+Execution time: 0.001236 seconds
+Episode 9:
+Waste: 999270
+Filled Ratio: 0.00
+Execution time: 0.000684 seconds
+Episode 9:
+Waste: 999254
+Filled Ratio: 0.00
+Execution time: 0.000986 seconds
+Episode 9:
+Waste: 999238
+Filled Ratio: 0.00
+Execution time: 0.001278 seconds
+Episode 9:
+Waste: 999222
+Filled Ratio: 0.00
+Execution time: 0.000667 seconds
+Episode 9:
+Waste: 999206
+Filled Ratio: 0.00
+Execution time: 0.000611 seconds
+Episode 9:
+Waste: 999190
+Filled Ratio: 0.00
+Execution time: 0.000578 seconds
+Episode 10:
+Waste: 999400
+Filled Ratio: 0.00
+Execution time: 0.000366 seconds
+Episode 10:
+Waste: 998800
+Filled Ratio: 0.00
+Execution time: 0.000405 seconds
+Episode 10:
+Waste: 998200
+Filled Ratio: 0.00
+Execution time: 0.000823 seconds
+Episode 10:
+Waste: 997600
+Filled Ratio: 0.00
+Execution time: 0.000723 seconds
+Episode 10:
+Waste: 997000
+Filled Ratio: 0.00
+Execution time: 0.018698 seconds
+Episode 10:
+Waste: 996400
+Filled Ratio: 0.00
+Execution time: 0.022450 seconds
+Episode 10:
+Waste: 995800
+Filled Ratio: 0.00
+Execution time: 0.016745 seconds
+Episode 10:
+Waste: 995800
+Filled Ratio: 0.00
+Execution time: 0.018154 seconds
+Episode 10:
+Waste: 995050
+Filled Ratio: 0.00
+Execution time: 0.016910 seconds
+Episode 10:
+Waste: 994300
+Filled Ratio: 0.01
+Execution time: 0.020747 seconds
+Episode 10:
+Waste: 993550
+Filled Ratio: 0.01
+Execution time: 0.016278 seconds
+Episode 10:
+Waste: 991576
+Filled Ratio: 0.01
+Execution time: 0.028561 seconds
+Episode 10:
+Waste: 989602
+Filled Ratio: 0.01
+Execution time: 0.028189 seconds
+Episode 10:
+Waste: 989602
+Filled Ratio: 0.01
+Execution time: 0.086972 seconds
+Episode 10:
+Waste: 989602
+Filled Ratio: 0.01
+Execution time: 0.050368 seconds
+Episode 10:
+Waste: 988011
+Filled Ratio: 0.01
+Execution time: 0.058303 seconds
+Episode 10:
+Waste: 986420
+Filled Ratio: 0.01
+Execution time: 0.075932 seconds
+Episode 10:
+Waste: 984829
+Filled Ratio: 0.02
+Execution time: 0.079662 seconds
+Episode 10:
+Waste: 983238
+Filled Ratio: 0.02
+Execution time: 0.077941 seconds
+Episode 10:
+Waste: 981647
+Filled Ratio: 0.02
+Execution time: 0.104077 seconds
+Episode 10:
+Waste: 980056
+Filled Ratio: 0.02
+Execution time: 0.132143 seconds
+Episode 10:
+Waste: 978465
+Filled Ratio: 0.02
+Execution time: 0.122725 seconds
+Episode 10:
+Waste: 976874
+Filled Ratio: 0.02
+Execution time: 0.135357 seconds
+Episode 10:
+Waste: 975283
+Filled Ratio: 0.02
+Execution time: 0.132201 seconds
+Episode 10:
+Waste: 975283
+Filled Ratio: 0.02
+Execution time: 0.148111 seconds
+Episode 10:
+Waste: 973771
+Filled Ratio: 0.03
+Execution time: 0.138040 seconds
+Episode 10:
+Waste: 972259
+Filled Ratio: 0.03
+Execution time: 0.117601 seconds
+Episode 10:
+Waste: 970747
+Filled Ratio: 0.03
+Execution time: 0.161827 seconds
+Episode 10:
+Waste: 969235
+Filled Ratio: 0.03
+Execution time: 0.168471 seconds
+Episode 10:
+Waste: 967723
+Filled Ratio: 0.03
+Execution time: 0.167128 seconds
+Episode 10:
+Waste: 966211
+Filled Ratio: 0.03
+Execution time: 0.198132 seconds
+Episode 10:
+Waste: 966127
+Filled Ratio: 0.03
+Execution time: 0.010296 seconds
+Episode 10:
+Waste: 966043
+Filled Ratio: 0.03
+Execution time: 0.010044 seconds
+Episode 10:
+Waste: 965959
+Filled Ratio: 0.03
+Execution time: 0.007540 seconds
+Episode 10:
+Waste: 965875
+Filled Ratio: 0.03
+Execution time: 0.007626 seconds
+Episode 10:
+Waste: 965791
+Filled Ratio: 0.03
+Execution time: 0.007721 seconds
+Episode 10:
+Waste: 965707
+Filled Ratio: 0.03
+Execution time: 0.017211 seconds
+Episode 10:
+Waste: 965707
+Filled Ratio: 0.03
+Execution time: 0.011701 seconds
+Episode 10:
+Waste: 965707
+Filled Ratio: 0.03
+Execution time: 0.163114 seconds
+Episode 10:
+Waste: 965707
+Filled Ratio: 0.03
+Execution time: 0.101917 seconds
+Episode 10:
+Waste: 965707
+Filled Ratio: 0.03
+Execution time: 0.093337 seconds
+Episode 10:
+Waste: 965707
+Filled Ratio: 0.03
+Execution time: 0.117977 seconds
+Episode 10:
+Waste: 965227
+Filled Ratio: 0.03
+Execution time: 0.015011 seconds
+Episode 10:
+Waste: 964747
+Filled Ratio: 0.04
+Execution time: 0.034786 seconds
+Episode 10:
+Waste: 964025
+Filled Ratio: 0.04
+Execution time: 0.045795 seconds
+Episode 10:
+Waste: 963303
+Filled Ratio: 0.04
+Execution time: 0.060923 seconds
+Episode 10:
+Waste: 962581
+Filled Ratio: 0.04
+Execution time: 0.083222 seconds
+Episode 10:
+Waste: 961859
+Filled Ratio: 0.04
+Execution time: 0.081611 seconds
+Episode 10:
+Waste: 961137
+Filled Ratio: 0.04
+Execution time: 0.135283 seconds
+Episode 10:
+Waste: 960415
+Filled Ratio: 0.04
+Execution time: 0.156607 seconds
+Episode 10:
+Waste: 959693
+Filled Ratio: 0.04
+Execution time: 0.138561 seconds
+Episode 10:
+Waste: 958971
+Filled Ratio: 0.04
+Execution time: 0.153082 seconds
+Episode 10:
+Waste: 957717
+Filled Ratio: 0.04
+Execution time: 0.180326 seconds
+Episode 10:
+Waste: 956463
+Filled Ratio: 0.04
+Execution time: 0.236237 seconds
+Episode 10:
+Waste: 955209
+Filled Ratio: 0.04
+Execution time: 0.266603 seconds
+Episode 10:
+Waste: 953955
+Filled Ratio: 0.05
+Execution time: 0.263273 seconds
+Episode 10:
+Waste: 952701
+Filled Ratio: 0.05
+Execution time: 0.256325 seconds
+Episode 10:
+Waste: 951447
+Filled Ratio: 0.05
+Execution time: 0.249397 seconds
+Episode 10:
+Waste: 950193
+Filled Ratio: 0.05
+Execution time: 0.269774 seconds
+Episode 10:
+Waste: 948939
+Filled Ratio: 0.05
+Execution time: 0.261942 seconds
+Episode 10:
+Waste: 948687
+Filled Ratio: 0.05
+Execution time: 0.074604 seconds
+Episode 10:
+Waste: 948435
+Filled Ratio: 0.05
+Execution time: 0.110842 seconds
+Episode 10:
+Waste: 948183
+Filled Ratio: 0.05
+Execution time: 0.116797 seconds
+Episode 10:
+Waste: 947931
+Filled Ratio: 0.05
+Execution time: 0.128876 seconds
+Episode 10:
+Waste: 947523
+Filled Ratio: 0.05
+Execution time: 0.147077 seconds
+Episode 10:
+Waste: 947115
+Filled Ratio: 0.05
+Execution time: 0.180384 seconds
+Episode 10:
+Waste: 946707
+Filled Ratio: 0.05
+Execution time: 0.169107 seconds
+Episode 10:
+Waste: 946299
+Filled Ratio: 0.05
+Execution time: 0.209047 seconds
+Episode 10:
+Waste: 945891
+Filled Ratio: 0.05
+Execution time: 0.195419 seconds
+Episode 10:
+Waste: 944967
+Filled Ratio: 0.06
+Execution time: 0.218991 seconds
+Episode 10:
+Waste: 944043
+Filled Ratio: 0.06
+Execution time: 0.215688 seconds
+Episode 10:
+Waste: 943119
+Filled Ratio: 0.06
+Execution time: 0.270069 seconds
+Episode 10:
+Waste: 943119
+Filled Ratio: 0.06
+Execution time: 0.287349 seconds
+Episode 10:
+Waste: 942639
+Filled Ratio: 0.06
+Execution time: 0.059500 seconds
+Episode 10:
+Waste: 942159
+Filled Ratio: 0.06
+Execution time: 0.097863 seconds
+Episode 10:
+Waste: 941679
+Filled Ratio: 0.06
+Execution time: 0.113156 seconds
+Episode 10:
+Waste: 941199
+Filled Ratio: 0.06
+Execution time: 0.178960 seconds
+Episode 10:
+Waste: 940719
+Filled Ratio: 0.06
+Execution time: 0.226050 seconds
+Episode 10:
+Waste: 940239
+Filled Ratio: 0.06
+Execution time: 0.216547 seconds
+Episode 10:
+Waste: 939759
+Filled Ratio: 0.06
+Execution time: 0.270385 seconds
+Episode 10:
+Waste: 939279
+Filled Ratio: 0.06
+Execution time: 0.266000 seconds
+Episode 10:
+Waste: 938799
+Filled Ratio: 0.06
+Execution time: 0.335994 seconds
+Episode 10:
+Waste: 938799
+Filled Ratio: 0.06
+Execution time: 0.355763 seconds
+Episode 10:
+Waste: 938031
+Filled Ratio: 0.06
+Execution time: 0.186090 seconds
+Episode 10:
+Waste: 937263
+Filled Ratio: 0.06
+Execution time: 0.252934 seconds
+Episode 10:
+Waste: 937263
+Filled Ratio: 0.06
+Execution time: 0.255083 seconds
+Episode 10:
+Waste: 936753
+Filled Ratio: 0.06
+Execution time: 0.371291 seconds
+Episode 10:
+Waste: 936243
+Filled Ratio: 0.06
+Execution time: 0.381698 seconds
+Episode 10:
+Waste: 935733
+Filled Ratio: 0.06
+Execution time: 0.400035 seconds
+Episode 10:
+Waste: 935223
+Filled Ratio: 0.06
+Execution time: 0.389989 seconds
+Episode 10:
+Waste: 934713
+Filled Ratio: 0.07
+Execution time: 0.414292 seconds
+Episode 10:
+Waste: 934203
+Filled Ratio: 0.07
+Execution time: 0.408902 seconds
+Episode 10:
+Waste: 933693
+Filled Ratio: 0.07
+Execution time: 0.419824 seconds
+Episode 10:
+Waste: 933183
+Filled Ratio: 0.07
+Execution time: 0.404865 seconds
+Episode 10:
+Waste: 932673
+Filled Ratio: 0.07
+Execution time: 0.410468 seconds
+Episode 10:
+Waste: 932673
+Filled Ratio: 0.07
+Execution time: 0.403780 seconds
+Episode 10:
+Waste: 931973
+Filled Ratio: 0.07
+Execution time: 0.282742 seconds
+Episode 10:
+Waste: 931273
+Filled Ratio: 0.07
+Execution time: 0.381694 seconds
+Episode 10:
+Waste: 930573
+Filled Ratio: 0.07
+Execution time: 0.406151 seconds
+Episode 10:
+Waste: 929873
+Filled Ratio: 0.07
+Execution time: 0.386860 seconds
+Episode 10:
+Waste: 929173
+Filled Ratio: 0.07
+Execution time: 0.418101 seconds
+Episode 10:
+Waste: 928473
+Filled Ratio: 0.07
+Execution time: 0.412879 seconds
+Episode 10:
+Waste: 928473
+Filled Ratio: 0.07
+Execution time: 0.401347 seconds
+Episode 10:
+Waste: 928341
+Filled Ratio: 0.07
+Execution time: 0.037711 seconds
+Episode 10:
+Waste: 928209
+Filled Ratio: 0.07
+Execution time: 0.135211 seconds
+Episode 10:
+Waste: 928077
+Filled Ratio: 0.07
+Execution time: 0.197716 seconds
+Episode 10:
+Waste: 927945
+Filled Ratio: 0.07
+Execution time: 0.192054 seconds
+Episode 10:
+Waste: 927885
+Filled Ratio: 0.07
+Execution time: 0.034091 seconds
+Episode 10:
+Waste: 927825
+Filled Ratio: 0.07
+Execution time: 0.028556 seconds
+Episode 10:
+Waste: 927765
+Filled Ratio: 0.07
+Execution time: 0.103964 seconds
+Episode 10:
+Waste: 927705
+Filled Ratio: 0.07
+Execution time: 0.101436 seconds
+Episode 10:
+Waste: 927699
+Filled Ratio: 0.07
+Execution time: 0.035422 seconds
+Episode 10:
+Waste: 927693
+Filled Ratio: 0.07
+Execution time: 0.035708 seconds
+Episode 10:
+Waste: 927687
+Filled Ratio: 0.07
+Execution time: 0.038018 seconds
+Episode 10:
+Waste: 927681
+Filled Ratio: 0.07
+Execution time: 0.036305 seconds
+Episode 10:
+Waste: 927675
+Filled Ratio: 0.07
+Execution time: 0.035960 seconds
+Episode 10:
+Waste: 927669
+Filled Ratio: 0.07
+Execution time: 0.033627 seconds
+Episode 10:
+Waste: 927663
+Filled Ratio: 0.07
+Execution time: 0.033081 seconds
+Episode 10:
+Waste: 927663
+Filled Ratio: 0.07
+Execution time: 0.043761 seconds
+
+Summary:
+Execution time: 9.638161 seconds
+Average Waste across 10 episodes: 964184.20
+Average Filled Ratio across 10 episodes: 0.04
+Average Time across 10 episodes: 9.638161 seconds
