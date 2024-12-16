@@ -1,8 +1,8 @@
 from policy import Policy
 import numpy as np
 import random
-#Width is the number of elements with -1 in one column, which means that the width is vertical, axis = 1
-#height is the number of elements with -1 in one row, which means that the height is horizontal, axis = 0
+#Width is the number of elements with -1 in one column, which means that the width is vertical, axis = 1.
+#height is the number of elements with -1 in one row, which means that the height is horizontal, axis = 0.
 class Policy2312900_2310559_2420003_2312894_2312974(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
