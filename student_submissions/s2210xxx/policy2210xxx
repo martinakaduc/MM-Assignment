@@ -1,7 +1,7 @@
 from policy import Policy
 
 
-def Policy2210xxx(Policy):
+class Policy2210xxx(Policy):
     def __init__(self, policy_id=1):
         assert policy_id in [1, 2], "Policy ID must be 1 or 2"
 
