@@ -1,3 +1,0 @@
-gymnasium
-gym_cutting_stock @ git+https://github.com/martinakaduc/gym-cutting-stock
-typing
