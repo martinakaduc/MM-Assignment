@@ -1,0 +1,86 @@
+# Reinforcement Learning Policy with PPO and Best Fit Heuristic
+
+This repository implements a reinforcement learning policy that optimizes product placement into storage stocks. The system combines two primary approaches: **Proximal Policy Optimization (PPO)** and the **Best Fit heuristic**. Each approach is described in detail below.
+
+---
+
+## Features
+- **PPO-based Policy Learning**: Learns an optimized policy over time based on experience and rewards.
+- **Best Fit Heuristic**: A deterministic method for placing products by minimizing wasted space.
+- Flexible design that supports both exploration (random actions) and exploitation (policy-guided actions).
+- Adaptable to various stock and product configurations.
+
+---
+
+## PPO (Proximal Policy Optimization)
+The **PPO-based policy** allows the algorithm to learn the optimal placement strategy by iteratively improving its decisions based on past experiences.
+
+### Key Components:
+1. **Policy Table**: Stores probabilities for each action in a given state. This helps guide action selection based on learned knowledge.
+2. **Value Function**: Estimates the expected return for a given state to assist in action selection and policy evaluation.
+3. **Replay Buffer**: Collects experiences (state, action, reward, next state) to update the policy in batches, stabilizing learning.
+4. **Entropy Regularization**: Adds randomness to the policy to encourage exploration, avoiding local optima.
+
+### Learning Workflow:
+1. Observe the current state of stocks and products.
+2. Select an action:
+   - **Exploration**: Randomly pick an action with a small probability.
+   - **Exploitation**: Use the policy table to select the most likely optimal action.
+3. Execute the action and receive a reward based on the efficiency of product placement.
+4. Store the experience in the replay buffer.
+5. Periodically update the policy using PPO:
+   - **Advantage Estimation**: Calculate the benefit of taking a specific action.
+   - **Policy Update**: Refine action probabilities to maximize expected rewards.
+   - **Value Function Update**: Improve estimates of expected returns.
+
+### Key Hyperparameters:
+- **Gamma (0.99)**: Discount factor for future rewards.
+- **Actor/Critic Learning Rates (0.01)**: Control the speed of policy and value function updates.
+- **Epsilon (0.2)**: PPO clipping range to limit updates for stability.
+- **Entropy Coefficient (0.01)**: Balances exploration vs. exploitation.
+- **Replay Buffer Size (50)**: Limits stored experiences to the most recent ones.
+
+---
+
+## Best Fit Heuristic
+The **Best Fit heuristic** is a rule-based approach for determining the most space-efficient placement of products into stocks. It is a deterministic alternative to PPO and does not involve learning.
+
+### How It Works:
+1. **Product Sorting**: Products are sorted by area (width × height) in descending order to prioritize larger items.
+2. **Stock Evaluation**: For each product, evaluate all available stocks to find the best placement.
+3. **Placement Optimization**:
+   - Calculate the remaining free space for each potential placement.
+   - Consider both original and rotated orientations (if applicable).
+   - Select the placement that minimizes wasted space.
+4. **Output**: If a valid placement is found, the product is placed. Otherwise, return a failure signal.
+
+### Example:
+1. A product of size [3, 4] needs to be placed.
+2. Evaluate all stocks for:
+   - Original orientation ([3, 4]).
+   - Rotated orientation ([4, 3]).
+3. Choose the placement that leaves the least remaining space in the stock.
+4. If no valid placement is found, the algorithm moves to the next product or returns a failure.
+
+---
+
+## Comparison
+| Feature                  | PPO                                | Best Fit                     |
+|--------------------------|-------------------------------------|------------------------------|
+| **Learning**             | Reinforcement learning-based       | Heuristic-based (deterministic) |
+| **Adaptability**         | Improves with experience           | Fixed rules                  |
+| **Exploration**          | Encourages exploration via entropy | No exploration               |
+| **Placement Strategy**   | Optimized over time                | Immediate, greedy placement  |
+| **Use Case**             | Dynamic environments with changes  | Static configurations        |
+
+---
+
+
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+
+
