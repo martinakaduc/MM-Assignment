@@ -24,7 +24,12 @@ class Policy:
         prod_w, prod_h = prod_size
 
         return np.all(stock[pos_x : pos_x + prod_w, pos_y : pos_y + prod_h] == -1)
-
+    
+    def _update_product_quantity(self, observation, prod_size):
+        for prod in observation["products"]:
+            if np.array_equal(prod["size"], prod_size) and prod["quantity"] > 0:
+                prod["quantity"] -= 1
+                break
 
 class RandomPolicy(Policy):
     def __init__(self):
@@ -111,3 +116,4 @@ class GreedyPolicy(Policy):
                     break
 
         return {"stock_idx": stock_idx, "size": prod_size, "position": (pos_x, pos_y)}
+
