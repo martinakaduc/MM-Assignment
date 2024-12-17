@@ -1,5 +1,0 @@
-gymnasium
-gym_cutting_stock @ git+https://github.com/martinakaduc/gym-cutting-stock
-python>=3.11.5
-numpy==1.24.4
-torch==2.4.0
