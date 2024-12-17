@@ -1,0 +1,11 @@
+{'filled_ratio': 0.29, 'trim_loss': 0.3517574861141647}
+{'filled_ratio': 0.14, 'trim_loss': 0.24944629479233593}
+{'filled_ratio': 0.27, 'trim_loss': 0.2151958273491021}
+{'filled_ratio': 0.16, 'trim_loss': 0.1397060582152692}
+{'filled_ratio': 0.44, 'trim_loss': 0.13807956816203887}
+{'filled_ratio': 0.31, 'trim_loss': 0.19573538561610063}
+{'filled_ratio': 0.07, 'trim_loss': 0.2983562956957791}
+{'filled_ratio': 0.44, 'trim_loss': 0.20977479134913246}
+{'filled_ratio': 0.38, 'trim_loss': 0.1926838421359216}
+{'filled_ratio': 0.32, 'trim_loss': 0.1954990582106379}
+Average trim_loss: 0.2186234607640482 in 10 eps

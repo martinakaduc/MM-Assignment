@@ -1,0 +1,6 @@
+gymnasium
+gym_cutting_stock @ git+https://github.com/martinakaduc/gym-cutting-stock
+matplotlib == 3.9.3
+numpy == 2.2.0
+pygame == 2.6.1
+torch == 2.5.1
