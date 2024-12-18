@@ -16,7 +16,7 @@ class Policy2312517_2310886_2311614_2311548_2312365(Policy):
         # Attributes for Genetic Policy
         if self.policy_id == 1:
             self.population_size = 10
-            self.generations = 5
+            self.generations = 10
             self.crossover_rate = 0.8
             self.mutation_rate = 0.2
             self.elite_size = 2
