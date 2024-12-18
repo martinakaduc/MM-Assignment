@@ -3,7 +3,7 @@ from policy import Policy
 import random
 
 
-class Policy2312517_2310886_2311614_2311548_2312365(Policy):
+class policy2312517_2310886_2311614_2311548_2312365(Policy):
     def __init__(self, policy_id=2):
         """
         Initialize the policy based on the given policy ID.
