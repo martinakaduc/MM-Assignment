@@ -16,7 +16,7 @@ class Policy2312517_2310886_2311614_2311548_2312365(Policy):
         # Attributes for Genetic Policy
         if self.policy_id == 1:
             self.population_size = 10
-            self.generations = 50
+            self.generations = 5
             self.crossover_rate = 0.8
             self.mutation_rate = 0.2
             self.elite_size = 2
@@ -307,6 +307,54 @@ class Policy2312517_2310886_2311614_2311548_2312365(Policy):
                 actions[idx] = random_solution[random.randint(0, len(random_solution) - 1)]
         return actions, stock_usage
 
+    def Best_fit_decrasing(self, observation, info):
+        list_prods = observation["products"]
+
+        prod_size = [0, 0]
+        stock_idx = -1
+        pos_x, pos_y = 0, 0
+
+        # Sắp xếp các sản phẩm theo thứ tự diện tích giảm dần
+        sorted_prods = sorted(list_prods, key=lambda x: x["size"][0] * x["size"][1], reverse=True)
+
+        # Duyệt qua danh sách đã sắp xếp và xử lí các sản phẩm có "quantity" > 0
+        for prod in sorted_prods:
+            if prod["quantity"] > 0:
+                prod_size = prod["size"]
+
+                best_fit_idx = -1
+                best_fit_pos = None
+                min_remaining_space = float('inf')
+
+                # Duyệt qua toàn bộ các tấm nguyên liệu để tìm tấm thích hợp cho sản phẩm
+                for i, stock in enumerate(observation["stocks"]):
+                    stock_w, stock_h = self._get_stock_size_(stock)
+                    prod_w, prod_h = prod_size
+
+                    # Nếu sản phẩm không nằm vừa trong tấm thì bỏ qua
+                    if stock_w < prod_w or stock_h < prod_h:
+                        continue
+
+                    # Nếu vừa thì kiểm tra từng vị trí
+                    for x in range(stock_w - prod_w + 1):
+                        for y in range(stock_h - prod_h + 1):
+                            if self._can_place_(stock, (x, y), prod_size):
+                                remaining_space = (stock_w * stock_h) - (prod_w * prod_h)
+                                if remaining_space < min_remaining_space:
+                                    best_fit_pos = (x, y)
+                                    best_fit_idx = i
+                                    min_remaining_space = remaining_space
+
+                    if best_fit_idx != -1:
+                        break
+
+                # Nếu tìm được vị trí hợp lệ thì lưu lại và trả về
+                if best_fit_pos is not None:
+                    stock_idx = best_fit_idx
+                    pos_x, pos_y = best_fit_pos
+                    break
+
+        return {"stock_idx": stock_idx, "size": prod_size, "position": (pos_x, pos_y)}
     
     #-----------------------SUPPORT FUNCTION FOR GENETIC POLICY--------------------------
 
